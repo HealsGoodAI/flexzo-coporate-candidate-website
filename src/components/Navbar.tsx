@@ -1,0 +1,394 @@
+import { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useLocation } from "react-router-dom";
+import { Menu, X, ChevronDown } from "lucide-react";
+import RegionFlag from "@/components/RegionFlag";
+import flexzoLogo from "@/assets/Flexzo-Logo.svg";
+import flexzoLogoWhite from "@/assets/flexzo-logo-white.png";
+import { useRegion } from "@/hooks/useRegion";
+import { useRegionText } from "@/lib/regionalize";
+
+const dropdownMenus: Record<string, { label: string; href: string }[]> = {
+  Products: [
+    { label: "AI Sourcing", href: "/products/ai-sourcing" },
+    { label: "Internal Staff Bank", href: "/products/internal-staff-bank" },
+    { label: "Collaborative Staff Bank", href: "/products/collaborative-staff-bank" },
+    { label: "National Staff Bank", href: "/products/national-staff-bank" },
+    { label: "Amplify", href: "/products/amplify" },
+    { label: "Clinical Services Planner", href: "/products/clinical-services-planner" },
+    { label: "Employee App", href: "/products/employee-app" },
+    { label: "Rostering", href: "/products/rostering" },
+  ],
+  Sectors: [
+    { label: "Hospitals", href: "/sectors/hospitals" },
+    { label: "Primary Care", href: "/sectors/primary-care" },
+    { label: "Private Healthcare", href: "/sectors/private-healthcare" },
+    { label: "Pharmacy", href: "/sectors/pharmacy" },
+    { label: "Social Care", href: "/sectors/social-care" },
+  ],
+};
+
+const simpleLinks: Record<string, string> = {
+  Features: "/platform-features",
+  News: "/news",
+  Jobs: "/jobs",
+  Contact: "/contact",
+};
+
+const navItems = ["Products", "Sectors", "Features", "News", "Jobs", "Contact"];
+
+interface NavbarProps {
+  transparent?: boolean;
+}
+
+const Navbar = ({ transparent = false }: NavbarProps) => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+  const [regionDropdownOpen, setRegionDropdownOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
+  const mobileRegionRef = useRef<HTMLDivElement>(null);
+  const { region, regionPath, switchRegion } = useRegion();
+  const { t } = useRegionText();
+  const location = useLocation();
+
+  const isNavItemActive = (item: string): boolean => {
+    const path = location.pathname;
+    if (item in dropdownMenus) {
+      return dropdownMenus[item].some((link) => path.includes(link.href));
+    }
+    if (item in simpleLinks) {
+      return path.includes(simpleLinks[item]);
+    }
+    return false;
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as Node;
+      if (
+        navRef.current && !navRef.current.contains(target) &&
+        (!mobileRegionRef.current || !mobileRegionRef.current.contains(target))
+      ) {
+        setOpenDropdown(null);
+        setRegionDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    if (!transparent) return;
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [transparent]);
+
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
+  const isTransparent = transparent && !scrolled && !mobileOpen;
+
+  const resolveHref = (href: string) => {
+    if (href.startsWith("http") || href === "#") return href;
+    return regionPath(href);
+  };
+
+  return (
+    <>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isTransparent
+            ? "bg-transparent border-b border-transparent"
+            : "bg-background/90 backdrop-blur-xl border-b border-border/50"
+        }`}
+      >
+        <div className="mx-auto flex max-w-7xl items-stretch justify-between px-6">
+          <a href={regionPath("/")} className="relative z-[60] flex items-center py-5">
+            <img
+              src={isTransparent ? flexzoLogoWhite : flexzoLogo}
+              alt="Flexzo"
+              className="h-7"
+            />
+          </a>
+
+          {/* Desktop */}
+          <div ref={navRef} className="hidden items-stretch gap-8 lg:flex">
+            {navItems.map((item) => {
+              const hasDropdown = item in dropdownMenus;
+              if (hasDropdown) {
+                const isOpen = openDropdown === item;
+                return (
+                  <div key={item} className="relative flex items-center">
+                    {isNavItemActive(item) && (
+                      <span className="absolute top-0 left-0 right-0 h-[3px] bg-[#0075FF]" />
+                    )}
+                    <button
+                      onClick={() => setOpenDropdown(isOpen ? null : item)}
+                      className={`flex items-center gap-1 text-sm transition-colors ${
+                        isTransparent
+                          ? isNavItemActive(item) ? "text-white" : "text-white/70 hover:text-white"
+                          : isNavItemActive(item) ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+                      }`}
+                    >
+                      {item}
+                      <ChevronDown size={14} className={`transition-transform ${isOpen ? "rotate-180" : ""}`} />
+                    </button>
+                    {isOpen && (
+                      <div className="absolute left-0 top-full z-50 mt-3 w-56 rounded-md border border-border bg-background py-2 shadow-lg">
+                        {dropdownMenus[item].map((link) => (
+                          <a
+                            key={link.label}
+                            href={resolveHref(link.href)}
+                            className="block px-4 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                            onClick={() => setOpenDropdown(null)}
+                          >
+                            {t(link.label)}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+              return (
+                <a
+                  key={item}
+                  href={resolveHref(simpleLinks[item] || `#${item.toLowerCase()}`)}
+                  className={`relative flex items-center text-sm transition-colors ${
+                    isTransparent
+                      ? isNavItemActive(item) ? "text-white" : "text-white/70 hover:text-white"
+                      : isNavItemActive(item) ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {isNavItemActive(item) && (
+                    <span className="absolute top-0 left-0 right-0 h-[3px] bg-[#0075FF]" />
+                  )}
+                  {item}
+                </a>
+              );
+            })}
+            <div className="flex items-center">
+              <a
+                href={resolveHref("/book-demo")}
+                className={`rounded-md px-6 py-2.5 text-sm font-medium transition-all ${
+                  isTransparent
+                    ? "bg-white/10 text-white border border-white/20 hover:bg-[#0075FF] hover:border-[#0075FF]"
+                    : "bg-primary text-primary-foreground hover:bg-[#0075FF] hover:text-white"
+                }`}
+              >
+                Book a demo
+              </a>
+            </div>
+            {/* Region dropdown */}
+            <div className="relative flex items-center">
+              <button
+                onClick={() => setRegionDropdownOpen(!regionDropdownOpen)}
+                className={`flex items-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium transition-all border ${
+                  isTransparent
+                    ? "text-white/70 border-white/20 hover:text-white hover:border-white/40"
+                    : "text-muted-foreground border-border hover:text-foreground hover:border-foreground/30"
+                }`}
+              >
+                <RegionFlag region={region} />
+                {region.toUpperCase()}
+                <ChevronDown size={14} className={`transition-transform ${regionDropdownOpen ? "rotate-180" : ""}`} />
+              </button>
+              {regionDropdownOpen && (
+                <div className="absolute right-0 top-full z-50 mt-2 w-48 rounded-md border border-border bg-background py-1 shadow-lg">
+                  {(["uk", "us"] as const).map((r) => (
+                    <button
+                      key={r}
+                      onClick={() => {
+                        switchRegion(r);
+                        setRegionDropdownOpen(false);
+                      }}
+                      className={`flex w-full items-center gap-3 px-4 py-2.5 text-sm transition-colors hover:bg-muted ${
+                        r === region ? "text-foreground font-medium" : "text-muted-foreground"
+                      }`}
+                    >
+                      <RegionFlag region={r} />
+                      {r === "uk" ? "United Kingdom" : "United States"}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Mobile toggle */}
+          <button
+            className={`relative z-[60] py-5 lg:hidden ${isTransparent ? "text-white" : "text-foreground"}`}
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </nav>
+
+      {/* Full-screen mobile drawer */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "tween", duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
+            className="fixed inset-0 z-[55] flex flex-col bg-foreground lg:hidden"
+          >
+            <div className="flex items-center justify-between px-6 pt-5">
+              <a href={regionPath("/")} onClick={() => setMobileOpen(false)}>
+                <img src={flexzoLogoWhite} alt="Flexzo" className="h-7" />
+              </a>
+              <button
+                onClick={() => setMobileOpen(false)}
+                className="text-primary-foreground p-1"
+                aria-label="Close menu"
+              >
+                <X size={24} />
+              </button>
+            </div>
+
+            <div className="flex items-center justify-end px-6 pt-4">
+
+              {/* Mobile region dropdown – matches desktop style */}
+              <div className="relative" ref={mobileRegionRef}>
+                <button
+                  onClick={() => setRegionDropdownOpen(!regionDropdownOpen)}
+                  className="flex items-center gap-2 rounded-md border border-primary-foreground/20 px-3 py-2 text-sm font-medium text-primary-foreground/70 transition-all hover:text-primary-foreground hover:border-primary-foreground/40"
+                >
+                  <RegionFlag region={region} />
+                  {region.toUpperCase()}
+                  <ChevronDown size={14} className={`transition-transform ${regionDropdownOpen ? "rotate-180" : ""}`} />
+                </button>
+                {regionDropdownOpen && (
+                  <div className="absolute right-0 top-full z-50 mt-2 w-48 rounded-md border border-border bg-background py-1 shadow-lg">
+                    {(["uk", "us"] as const).map((r) => (
+                      <button
+                        key={r}
+                        onClick={() => {
+                          switchRegion(r);
+                          setRegionDropdownOpen(false);
+                          setMobileOpen(false);
+                        }}
+                        className={`flex w-full items-center gap-3 px-4 py-2.5 text-sm transition-colors hover:bg-muted ${
+                          r === region ? "text-foreground font-medium" : "text-muted-foreground"
+                        }`}
+                      >
+                        <RegionFlag region={r} />
+                        {r === "uk" ? "United Kingdom" : "United States"}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <div className="flex flex-1 flex-col justify-center px-6 overflow-y-auto">
+              <nav className="flex flex-col gap-2">
+                {navItems.map((item, i) => {
+                  const hasDropdown = item in dropdownMenus;
+                  if (hasDropdown) {
+                    const isExpanded = mobileExpanded === item;
+                    return (
+                      <motion.div
+                        key={item}
+                        initial={{ opacity: 0, x: 40 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.15 + i * 0.06, duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+                      >
+                        <button
+                          onClick={() => setMobileExpanded(isExpanded ? null : item)}
+                          className="flex w-full items-center justify-between py-3 text-3xl font-bold text-primary-foreground transition-colors hover:text-[#0075FF]"
+                        >
+                          {item}
+                          <ChevronDown
+                            size={20}
+                            className={`text-primary-foreground/40 transition-transform ${isExpanded ? "rotate-180" : ""}`}
+                          />
+                        </button>
+                        <AnimatePresence>
+                          {isExpanded && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.3 }}
+                              className="overflow-hidden"
+                            >
+                              <div className="flex flex-col gap-1 pb-2 pl-4">
+                                {dropdownMenus[item].map((link, j) => (
+                                  <motion.a
+                                    key={link.label}
+                                    href={resolveHref(link.href)}
+                                    initial={{ opacity: 0, x: 20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: j * 0.04, duration: 0.3 }}
+                                    className="py-2 text-lg text-primary-foreground/50 transition-colors hover:text-[#0075FF]"
+                                    onClick={() => setMobileOpen(false)}
+                                  >
+                                    {t(link.label)}
+                                  </motion.a>
+                                ))}
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </motion.div>
+                    );
+                  }
+                  return (
+                    <motion.a
+                      key={item}
+                      href={resolveHref(simpleLinks[item] || `#${item.toLowerCase()}`)}
+                      initial={{ opacity: 0, x: 40 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.15 + i * 0.06, duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+                      className="py-3 text-3xl font-bold text-primary-foreground transition-colors hover:text-[#0075FF]"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {item}
+                    </motion.a>
+                  );
+                })}
+              </nav>
+
+              <motion.a
+                href={resolveHref("/book-demo")}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.4 }}
+                className="mt-8 inline-block rounded-md bg-[#0075FF] px-8 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-[#0060D0]"
+                onClick={() => setMobileOpen(false)}
+              >
+                Book a demo
+              </motion.a>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.4 }}
+              className="px-8 pb-10"
+            >
+              <p className="text-sm text-primary-foreground/30">
+                © {new Date().getFullYear()} Flexzo. All rights reserved.
+              </p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
+
+export default Navbar;

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>{{subject}}</title>
+  <style>
+    body{margin:0;padding:0;background:#F4F5F7;font-family:'Helvetica Neue',Arial,Helvetica,sans-serif;color:#0a2540;-webkit-font-smoothing:antialiased}
+    .wrap{width:100%;padding:32px 0 40px}
+    .card{width:92%;max-width:600px;margin:0 auto;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+    .header{background:#063165;padding:22px 32px}
+    .header img{height:26px;width:auto;display:block}
+    .content{padding:28px 32px}
+    .greeting{font-size:16px;font-weight:600;color:#063165;margin:0 0 12px}
+    .body-text{font-size:14px;line-height:1.65;color:#374151;margin:0 0 16px}
+    .divider{height:1px;background:#E5E7EB;margin:22px 0}
+    .cta-section{text-align:center;margin-top:8px}
+    .cta-btn{display:inline-block;background:#0075FF;color:#fff;text-decoration:none;font-size:14px;font-weight:700;padding:13px 28px;border-radius:8px}
+    .cta-note{font-size:12px;color:#9CA3AF;margin-top:10px}
+    .footer{background:#063165;padding:20px 32px;text-align:center}
+    .footer-logo img{height:20px;opacity:0.5;margin-bottom:10px}
+    .footer-text{font-size:11px;color:rgba(255,255,255,0.5);line-height:1.6;margin:0}
+    .footer-text a{color:rgba(255,255,255,0.5);text-decoration:none}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="header">
+      <img src="https://nlallbutnmsyeqyawzbh.supabase.co/storage/v1/object/public/email-assets/flexzo-logo-white.png" alt="Flexzo"/>
+    </div>
+    <div class="content">
+      <p class="greeting">{{greeting}}</p>
+      <div class="body-text">{{body}}</div>
+      <div class="divider"></div>
+      <div class="cta-section">
+        <a href="{{ctaLink}}" class="cta-btn">{{ctaText}}</a>
+        <p class="cta-note">{{note}}</p>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-logo"><img src="https://nlallbutnmsyeqyawzbh.supabase.co/storage/v1/object/public/email-assets/flexzo-logo-white.png" alt="Flexzo"/></div>
+      <p class="footer-text">
+        &copy; 2026 Flexzo. All rights reserved.<br/>
+        Flexzo Ltd &middot; <a href="https://flexzo.ai/uk/privacy-policy">Privacy Policy</a> &middot; <a href="https://flexzo.ai/uk/terms-and-conditions">Terms and Conditions</a><br/>
+        This is an automated email from <a href="mailto:applications@flexzo.ai">applications@flexzo.ai</a>. Please do not reply.
+      </p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
