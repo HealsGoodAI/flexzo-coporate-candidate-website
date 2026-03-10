@@ -10,6 +10,7 @@ import { useRegionText } from "@/lib/regionalize";
 
 const dropdownMenus: Record<string, { label: string; href: string }[]> = {
   Benefits: [
+    { label: "Why Join Flexzo", href: "/why-join-flexzo" },
     { label: "Platform Features", href: "/platform-features" },
     { label: "Employee App", href: "/products/employee-app" },
   ],

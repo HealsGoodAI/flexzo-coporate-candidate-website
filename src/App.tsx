@@ -40,6 +40,7 @@ import EstatesAndFacilities from "./pages/careers/EstatesAndFacilities";
 import Rostering from "./pages/Rostering";
 import CarbonReductionPlan from "./pages/CarbonReductionPlan";
 import Team from "./pages/Team";
+import WhyJoinFlexzo from "./pages/WhyJoinFlexzo";
 import EmailTemplateTest from "./pages/EmailTemplateTest";
 import NotFound from "./pages/NotFound";
 
@@ -68,6 +69,7 @@ const App = () => (
             <Route path="products/employee-app" element={<EmployeeApp />} />
             <Route path="products/rostering" element={<Rostering />} />
             <Route path="platform-features" element={<PlatformFeatures />} />
+            <Route path="why-join-flexzo" element={<WhyJoinFlexzo />} />
             <Route path="jobs" element={<Jobs />} />
             <Route path="jobs/search" element={<JobSearchResults />} />
             <Route path="jobs/:id" element={<JobDetail />} />
