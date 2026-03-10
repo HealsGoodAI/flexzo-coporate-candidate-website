@@ -13,6 +13,17 @@ const fadeUp = {
   }),
 };
 
+import { Clock, Smartphone, FileCheck, Navigation, Bell, Wallet } from "lucide-react";
+
+const candidateFeatures = [
+  { icon: Brain, title: "AI-Powered Job Matching", description: "Get instantly matched with shifts that fit your skills, location, and availability—no endless searching." },
+  { icon: CalendarCheck, title: "Total Flexibility – Work When You Want", description: "Update your availability via email, WhatsApp, or SMS and accept shifts on your terms." },
+  { icon: ShieldCheck, title: "Simplified Compliance Management", description: "Upload your DBS, right-to-work, and certifications once—Flexzo keeps track and reminds you of renewals." },
+  { icon: Navigation, title: "Smart Shift Recommendations", description: "Our AI suggests shifts based on real-time travel data, ensuring you only get alerts for jobs you can realistically reach." },
+  { icon: Bell, title: "Instant Notifications & Confirmations", description: "Receive instant job alerts and confirm placements in one tap—no waiting around." },
+  { icon: Wallet, title: "Track Your Work & Earnings", description: "View all your past and upcoming shifts, plus track your total earnings in one simple dashboard." },
+];
+
 const hospitalFeatures = [
   { icon: Users, title: "Instant Access to Healthcare Professionals", description: "Skip the slow hiring process. Flexzo AI connects hospitals and healthcare providers with a nationwide database of pre-vetted, compliance-ready professionals — ready to work now." },
   { icon: CalendarCheck, title: "Seamless Workforce Planning", description: "Staff shortages? Not on our watch. Flexzo AI fills shifts in real time, matching the right professionals to your vacancies instantly — so patient care never takes a hit." },
@@ -64,6 +75,42 @@ const PlatformFeatures = () => {
         </div>
       </section>
 
+      {/* Candidate Features */}
+      <section className="py-28 lg:py-36">
+        <div className="mx-auto max-w-7xl px-6">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp} className="mb-16 text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#0075FF]">{t("Built specifically for healthcare professionals")}</p>
+            <h2 className="mt-4 text-4xl font-bold tracking-tight text-foreground md:text-5xl">{t("Features for Healthcare Professionals")}</h2>
+          </motion.div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {candidateFeatures.map((feature, i) => (
+              <motion.div key={feature.title} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={i} variants={fadeUp} className="group rounded-2xl border border-border bg-background p-8 transition-all hover:border-[#0075FF]/20 hover:shadow-lg">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#0075FF]/10 transition-colors group-hover:bg-[#0075FF]/20"><feature.icon className="h-6 w-6 text-[#0075FF]" /></div>
+                <h3 className="mb-3 text-lg font-semibold text-foreground">{t(feature.title)}</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">{t(feature.description)}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* One Profile CTA */}
+      <section className="relative bg-surface py-24 lg:py-32">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+            <h2 className="text-3xl font-bold text-foreground md:text-4xl">{t("One profile, endless possibilities")}</h2>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+              {t("With Flexzo AI, you join the UK's largest collaborative staff bank, opening doors to a wealth of opportunities you won't find anywhere else. Whether you're looking for a day shift, a short-term placement, or a permanent contract, our intelligent job board puts you in the driver's seat.")}
+            </p>
+            <p className="mt-4 text-lg font-medium text-foreground">{t("No waiting, no placement fees, just seamless hiring.")}</p>
+            <div className="mt-8">
+              <RegionLink href="/jobs" className="group inline-flex items-center gap-2 rounded-md bg-[#0075FF] px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-[#0060D0]">{t("Register Now")} <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" /></RegionLink>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Hospital Features */}
       <section className="py-28 lg:py-36">
         <div className="mx-auto max-w-7xl px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp} className="mb-16 text-center">
