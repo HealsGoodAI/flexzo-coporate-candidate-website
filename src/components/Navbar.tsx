@@ -10,6 +10,7 @@ import { useRegionText } from "@/lib/regionalize";
 
 const dropdownMenus: Record<string, { label: string; href: string }[]> = {
   Products: [
+    { label: "Platform Features", href: "/platform-features" },
     { label: "AI Sourcing", href: "/products/ai-sourcing" },
     { label: "Internal Staff Bank", href: "/products/internal-staff-bank" },
     { label: "Collaborative Staff Bank", href: "/products/collaborative-staff-bank" },
@@ -31,13 +32,12 @@ const dropdownMenus: Record<string, { label: string; href: string }[]> = {
 };
 
 const simpleLinks: Record<string, string> = {
-  Features: "/platform-features",
   News: "/news",
   Jobs: "/jobs",
   Contact: "/contact",
 };
 
-const navItems = ["Jobs", "Explore Careers", "Products", "Features", "News", "Contact"];
+const navItems = ["Jobs", "Explore Careers", "Products", "News", "Contact"];
 
 interface NavbarProps {
   transparent?: boolean;
