@@ -78,10 +78,10 @@ const SectorsOverview = () => {
         <div className="mb-14 flex items-end justify-between">
           <ScrollReveal animation="fade-right">
             <span className="mb-3 inline-block text-xs font-medium uppercase tracking-widest text-background/40">
-              {t("Sectors We Serve")}
+              {t("Explore Careers")}
             </span>
             <h2 className="max-w-xl font-display text-3xl font-bold text-background md:text-4xl">
-              {t("Built for every corner of healthcare")}
+              {t("Discover your NHS career path")}
             </h2>
           </ScrollReveal>
           <div className="hidden items-center gap-2 md:flex">
