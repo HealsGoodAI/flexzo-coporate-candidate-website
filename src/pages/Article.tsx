@@ -116,7 +116,7 @@ const Article = () => {
               animate="visible"
               custom={1}
               variants={fadeUp}
-              className="max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight text-primary-foreground md:text-6xl lg:text-7xl"
+              className="max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-6xl lg:text-7xl"
             >
               {article.title}
             </motion.h1>
