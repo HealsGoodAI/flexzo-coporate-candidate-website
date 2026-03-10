@@ -32,7 +32,6 @@ const dropdownMenus: Record<string, { label: string; href: string }[]> = {
 };
 
 const simpleLinks: Record<string, string> = {
-  Features: "/platform-features",
   News: "/news",
   Jobs: "/jobs",
   Contact: "/contact",
