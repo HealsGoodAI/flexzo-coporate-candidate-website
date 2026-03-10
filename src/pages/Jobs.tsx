@@ -188,7 +188,7 @@ const Jobs = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="mb-4 font-display text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">{t("Ready to take control of your career?")}</h2>
             <p className="mb-8 text-base text-primary-foreground/70">{t("Join the Flexzo AI Collaborative Staff Bank and access opportunities nationwide.")}</p>
-            <Link to={regionPath("/book-demo")} className="inline-block rounded-lg bg-accent px-8 py-3 font-display text-sm font-semibold text-accent-foreground transition-all hover:opacity-90">{t("Get Started")}</Link>
+            <Link to={regionPath("/register")} className="inline-block rounded-lg bg-accent px-8 py-3 font-display text-sm font-semibold text-accent-foreground transition-all hover:opacity-90">{t("Get Started")}</Link>
           </motion.div>
         </div>
       </section>

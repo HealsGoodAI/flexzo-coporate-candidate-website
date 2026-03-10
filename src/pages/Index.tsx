@@ -16,7 +16,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="AI-Powered Healthcare Staffing Platform"
-        description="Flexzo – AI-powered healthcare staffing platform. Smarter workforce management for hospitals, primary care, pharmacy and social care. Book a demo today."
+        description="Flexzo – AI-powered healthcare staffing platform. Smarter workforce management for hospitals, primary care, pharmacy and social care. Register today."
         path={`/${region}`}
         jsonLd={[organizationSchema, websiteSchema]}
       />

@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { useRegion } from "@/hooks/useRegion";
 import { useRegionText } from "@/lib/regionalize";
 
-const BookDemoSuccess = () => {
+const RegisterSuccess = () => {
   const { regionPath } = useRegion();
   const { t } = useRegionText();
 
@@ -31,7 +31,7 @@ const BookDemoSuccess = () => {
             transition={{ delay: 0.2 }}
             className="mb-4 font-display text-3xl font-bold text-foreground md:text-4xl"
           >
-            {t("Demo booked!")}
+            {t("Registration complete!")}
           </motion.h1>
 
           <motion.p
@@ -40,7 +40,7 @@ const BookDemoSuccess = () => {
             transition={{ delay: 0.3 }}
             className="mb-4 text-lg leading-relaxed text-muted-foreground"
           >
-            {t("Thank you for your interest in Flexzo. A member of our team will be in touch shortly to confirm your demo.")}
+            {t("Thank you for registering with Flexzo. A member of our team will review your details and be in touch shortly.")}
           </motion.p>
 
           <motion.p
@@ -49,7 +49,7 @@ const BookDemoSuccess = () => {
             transition={{ delay: 0.4 }}
             className="mb-10 text-sm text-muted-foreground"
           >
-            {t("In the meantime, feel free to explore our platform and discover how Flexzo can transform your workforce management.")}
+            {t("In the meantime, feel free to explore available jobs and discover how Flexzo can help advance your healthcare career.")}
           </motion.p>
 
           <motion.div
@@ -59,16 +59,16 @@ const BookDemoSuccess = () => {
             className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
           >
             <Link
-              to={regionPath("/")}
+              to={regionPath("/jobs")}
               className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-medium text-accent-foreground transition-colors hover:bg-accent/90"
             >
-              {t("Back to home")} <ArrowRight size={16} />
+              {t("Browse Jobs")} <ArrowRight size={16} />
             </Link>
             <Link
-              to={regionPath("/platform-features")}
+              to={regionPath("/")}
               className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-muted"
             >
-              {t("Explore features")}
+              {t("Back to home")}
             </Link>
           </motion.div>
         </div>
@@ -79,4 +79,4 @@ const BookDemoSuccess = () => {
   );
 };
 
-export default BookDemoSuccess;
+export default RegisterSuccess;

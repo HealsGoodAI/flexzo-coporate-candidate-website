@@ -179,14 +179,14 @@ const Navbar = ({ transparent = false }: NavbarProps) => {
             })}
             <div className="flex items-center">
               <a
-                href={resolveHref("/book-demo")}
+                href={resolveHref("/register")}
                 className={`rounded-md px-6 py-2.5 text-sm font-medium transition-all ${
                   isTransparent
                     ? "bg-white/10 text-white border border-white/20 hover:bg-[#0075FF] hover:border-[#0075FF]"
                     : "bg-primary text-primary-foreground hover:bg-[#0075FF] hover:text-white"
                 }`}
               >
-                Book a demo
+                Register
               </a>
             </div>
             {/* Region dropdown */}
@@ -363,14 +363,14 @@ const Navbar = ({ transparent = false }: NavbarProps) => {
               </nav>
 
               <motion.a
-                href={resolveHref("/book-demo")}
+                href={resolveHref("/register")}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.4 }}
                 className="mt-8 inline-block rounded-md bg-[#0075FF] px-8 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-[#0060D0]"
                 onClick={() => setMobileOpen(false)}
               >
-                Book a demo
+                Register
               </motion.a>
             </div>
 

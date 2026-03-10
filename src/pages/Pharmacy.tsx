@@ -29,9 +29,9 @@ const whyChoose = [
   "Designed for modern UK pharmacy services",
 ];
 
-const BookDemoButton = ({ t }: { t: (s: string) => string }) => (
-  <RegionLink href="/book-demo" className="group inline-flex items-center gap-2 rounded-md bg-[#0075FF] px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-[#0060D0]">
-    {t("Book a Demo")} <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+const RegisterButton = ({ t }: { t: (s: string) => string }) => (
+  <RegionLink href="/register" className="group inline-flex items-center gap-2 rounded-md bg-[#0075FF] px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-[#0060D0]">
+    {t("Register")} <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
   </RegionLink>
 );
 
@@ -55,7 +55,7 @@ const Pharmacy = () => {
               {t("Flexzo.ai is an AI-powered pharmacy staffing platform designed to help UK pharmacies reduce staffing gaps, improve workforce planning, and cut reliance on expensive agencies.")}
             </motion.p>
             <motion.div initial="hidden" animate="visible" custom={2} variants={fadeUp} className="mt-12 flex flex-wrap gap-4">
-              <BookDemoButton t={t} />
+              <RegisterButton t={t} />
               <RegionLink href="/contact" className="inline-flex items-center gap-2 rounded-md border border-primary-foreground/20 px-8 py-4 text-sm font-semibold text-primary-foreground transition-colors hover:border-primary-foreground/40">{t("Contact Sales")}</RegionLink>
             </motion.div>
           </motion.div>
@@ -147,12 +147,12 @@ const Pharmacy = () => {
         <div className="mx-auto max-w-4xl px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
             <Sparkles className="mx-auto mb-6 h-10 w-10 text-[#0075FF]" />
-            <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">{t("Book a")} <span className="text-[#0075FF]">{t("Demo")}</span></h2>
+            <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">{t("Register")} <span className="text-[#0075FF]">{t("Today")}</span></h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-              {t("Looking for a smarter way to manage pharmacy staffing and recruitment? Book a demo today and discover how Flexzo.ai can help your pharmacy reduce rota gaps, lower agency spend, and improve operational efficiency.")}
+              {t("Looking for a smarter way to manage pharmacy staffing and recruitment? Register today and discover how Flexzo.ai can help your pharmacy reduce rota gaps, lower agency spend, and improve operational efficiency.")}
             </p>
             <div className="mt-12 flex flex-wrap justify-center gap-4">
-              <BookDemoButton t={t} />
+              <RegisterButton t={t} />
               <RegionLink href="/contact" className="inline-flex items-center gap-2 rounded-md border border-border px-8 py-4 text-sm font-semibold text-foreground transition-colors hover:bg-muted">{t("Contact Sales")}</RegionLink>
             </div>
           </motion.div>

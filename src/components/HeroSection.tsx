@@ -58,10 +58,10 @@ const HeroSection = () => {
             className="mt-10 flex flex-wrap items-center gap-4"
           >
             <RegionLink
-              href="/book-demo"
+              href="/register"
               className="rounded-md bg-primary px-8 py-3.5 font-display text-sm font-semibold text-primary-foreground transition-all hover:bg-[#0075FF] hover:text-white"
             >
-              {t("Book a Demo")}
+              {t("Register")}
             </RegionLink>
             <a
               href="#features"

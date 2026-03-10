@@ -10,13 +10,12 @@ export interface ApplicationEmailParams {
   region?: string;
 }
 
-export interface BookDemoEmailParams {
-  name: string;
+export interface RegistrationEmailParams {
+  firstName: string;
+  lastName: string;
   email: string;
   telephone: string;
-  organisation: string;
-  date: string;
-  time: string;
+  cvFile: File;
 }
 
 export interface ContactEmailParams {
@@ -85,12 +84,20 @@ export const sendApplicationEmails = async (params: ApplicationEmailParams & { r
   }
 };
 
-export const sendBookDemoEmail = async (params: BookDemoEmailParams & { recaptchaToken: string; _hp_field?: string; _form_loaded_at?: number }): Promise<void> => {
-  const { recaptchaToken, _hp_field, _form_loaded_at, ...rest } = params;
+export const sendRegistrationEmail = async (params: RegistrationEmailParams & { recaptchaToken: string; _hp_field?: string; _form_loaded_at?: number }): Promise<void> => {
+  const { firstName, lastName, email, telephone, cvFile, recaptchaToken, _hp_field, _form_loaded_at } = params;
+
+  const cvBase64 = await fileToBase64(cvFile);
+
   const { data, error } = await supabase.functions.invoke("send-application-email", {
     body: {
-      type: "book_demo",
-      ...rest,
+      type: "registration",
+      firstName,
+      lastName,
+      email,
+      telephone,
+      cvBase64,
+      cvFileName: cvFile.name,
       recaptchaToken,
       _hp_field,
       _form_loaded_at,
@@ -99,7 +106,7 @@ export const sendBookDemoEmail = async (params: BookDemoEmailParams & { recaptch
 
   if (error) {
     console.error("Edge function error:", error);
-    throw new Error("Failed to send demo booking email");
+    throw new Error("Failed to send registration email");
   }
 
   if (data?.error) {

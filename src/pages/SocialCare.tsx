@@ -32,9 +32,9 @@ const whyChoose = [
   "AI-first approach that goes beyond simply digitising existing recruitment models",
 ];
 
-const BookDemoButton = ({ t }: { t: (s: string) => string }) => (
-  <RegionLink href="/book-demo" className="group inline-flex items-center gap-2 rounded-md bg-[#0075FF] px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-[#0060D0]">
-    {t("Book a Demo")} <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+const RegisterButton = ({ t }: { t: (s: string) => string }) => (
+  <RegionLink href="/register" className="group inline-flex items-center gap-2 rounded-md bg-[#0075FF] px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-[#0060D0]">
+    {t("Register")} <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
   </RegionLink>
 );
 
@@ -59,7 +59,7 @@ const SocialCare = () => {
               {t("Flexzo replaces fragmented, agency-led processes with intelligent automation — helping care homes radically reduce staffing costs while improving fill rates, control, and staff experience.")}
             </motion.p>
             <motion.div initial="hidden" animate="visible" custom={2} variants={fadeUp} className="mt-12 flex flex-wrap gap-4">
-              <BookDemoButton t={t} />
+              <RegisterButton t={t} />
               <RegionLink href="/contact" className="inline-flex items-center gap-2 rounded-md border border-primary-foreground/20 px-8 py-4 text-sm font-semibold text-primary-foreground transition-colors hover:border-primary-foreground/40">{t("Contact Sales")}</RegionLink>
             </motion.div>
           </motion.div>
@@ -160,7 +160,7 @@ const SocialCare = () => {
               {t("See how Flexzo can help your care organisation reduce temporary staffing costs, improve fill rates, and give managers back their time. Modular by design — start where the pressure is greatest.")}
             </p>
             <div className="mt-12 flex flex-wrap justify-center gap-4">
-              <BookDemoButton t={t} />
+              <RegisterButton t={t} />
               <RegionLink href="/contact" className="inline-flex items-center gap-2 rounded-md border border-border px-8 py-4 text-sm font-semibold text-foreground transition-colors hover:bg-muted">{t("Contact Sales")}</RegionLink>
             </div>
           </motion.div>

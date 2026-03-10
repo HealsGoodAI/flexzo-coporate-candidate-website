@@ -145,10 +145,10 @@ const InternalStaffBank = () => {
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <RegionLink
-                  href="/book-demo"
+                  href="/register"
                   className="group inline-flex items-center gap-2 rounded-md bg-[#0075FF] px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-[#0060D0]"
                 >
-                  Book a Demo
+                  Register
                   <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
                 </RegionLink>
                 <RegionLink
@@ -438,14 +438,14 @@ const InternalStaffBank = () => {
               {t("Ready to build your")} <span className="text-[#0075FF]">{t("staff bank")}</span>?
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
-              {t("Book a demo and discover how Flexzo Staff Bank can transform your internal workforce into a dependable source of clinical cover.")}
+              {t("Register today and discover how Flexzo Staff Bank can transform your internal workforce into a dependable source of clinical cover.")}
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <RegionLink
-                href="/book-demo"
+                href="/register"
                 className="group inline-flex items-center gap-2 rounded-md bg-primary px-10 py-4 text-sm font-semibold text-primary-foreground transition-all hover:bg-[#0075FF] hover:text-white"
               >
-                Book a Demo
+                Register
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </RegionLink>
               <RegionLink
