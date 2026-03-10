@@ -13,6 +13,17 @@ const fadeUp = {
   }),
 };
 
+import { Clock, Smartphone, FileCheck, Navigation, Bell, Wallet } from "lucide-react";
+
+const candidateFeatures = [
+  { icon: Brain, title: "AI-Powered Job Matching", description: "Get instantly matched with shifts that fit your skills, location, and availability—no endless searching." },
+  { icon: CalendarCheck, title: "Total Flexibility – Work When You Want", description: "Update your availability via email, WhatsApp, or SMS and accept shifts on your terms." },
+  { icon: ShieldCheck, title: "Simplified Compliance Management", description: "Upload your DBS, right-to-work, and certifications once—Flexzo keeps track and reminds you of renewals." },
+  { icon: Navigation, title: "Smart Shift Recommendations", description: "Our AI suggests shifts based on real-time travel data, ensuring you only get alerts for jobs you can realistically reach." },
+  { icon: Bell, title: "Instant Notifications & Confirmations", description: "Receive instant job alerts and confirm placements in one tap—no waiting around." },
+  { icon: Wallet, title: "Track Your Work & Earnings", description: "View all your past and upcoming shifts, plus track your total earnings in one simple dashboard." },
+];
+
 const hospitalFeatures = [
   { icon: Users, title: "Instant Access to Healthcare Professionals", description: "Skip the slow hiring process. Flexzo AI connects hospitals and healthcare providers with a nationwide database of pre-vetted, compliance-ready professionals — ready to work now." },
   { icon: CalendarCheck, title: "Seamless Workforce Planning", description: "Staff shortages? Not on our watch. Flexzo AI fills shifts in real time, matching the right professionals to your vacancies instantly — so patient care never takes a hit." },
