@@ -1,4 +1,14 @@
 import newsFeatured from "@/assets/news-featured.jpg";
+import articleNhsShifts from "@/assets/article-nhs-shifts.jpg";
+import articleFlexibleWork from "@/assets/article-flexible-work.jpg";
+import articleCompliance from "@/assets/article-compliance.jpg";
+import articleAgencyCosts from "@/assets/article-agency-costs.jpg";
+import articleCollaborative from "@/assets/article-collaborative.jpg";
+import articlePayEarnings from "@/assets/article-pay-earnings.jpg";
+import articleWorkforceTech from "@/assets/article-workforce-tech.jpg";
+import articleStaffingShortage from "@/assets/article-staffing-shortage.jpg";
+import articleNhsTrust from "@/assets/article-nhs-trust.jpg";
+import articleRegistration from "@/assets/article-registration.jpg";
 
 export interface ArticleSection {
   heading?: string;
@@ -19,7 +29,6 @@ export interface Article {
 }
 
 export const articles: Article[] = [
-  // ─── PAGE 1: For Candidates ───────────────────────────────────────
   {
     slug: "part-time-nhs-shifts-is-it-a-good-option-for-you",
     title: "Part-Time NHS Shifts: Is It a Good Option for You?",
@@ -28,7 +37,7 @@ export const articles: Article[] = [
     date: "January 27, 2026",
     publishedDate: "January 27, 2026",
     excerpt: "Explore whether part-time NHS shifts are the right fit for your lifestyle and career goals, including pay expectations, flexibility, and how to get started.",
-    image: newsFeatured,
+    image: articleFlexibleWork,
     sections: [
       {
         content: [
@@ -62,7 +71,7 @@ export const articles: Article[] = [
     date: "October 15, 2025",
     publishedDate: "October 15, 2025",
     excerpt: "Find out how much control you really have over NHS bank shifts, from choosing when and where you work to understanding how shift allocation works.",
-    image: newsFeatured,
+    image: articleNhsShifts,
     sections: [
       {
         content: [
@@ -88,7 +97,7 @@ export const articles: Article[] = [
     date: "June 20, 2025",
     publishedDate: "June 20, 2025",
     excerpt: "A step-by-step guide to registering with an NHS staff bank, including the documents you'll need and how to fast-track the process.",
-    image: newsFeatured,
+    image: articleRegistration,
     sections: [
       {
         content: [
@@ -114,7 +123,7 @@ export const articles: Article[] = [
     date: "October 15, 2025",
     publishedDate: "October 15, 2025",
     excerpt: "Understand the rules and practicalities of combining NHS bank and locum work, including tax implications and how to manage your schedule effectively.",
-    image: newsFeatured,
+    image: articleCollaborative,
     sections: [
       {
         content: [
@@ -140,7 +149,7 @@ export const articles: Article[] = [
     date: "June 20, 2025",
     publishedDate: "June 20, 2025",
     excerpt: "Compare NHS bank shifts and locum agency work side by side—covering pay, flexibility, compliance, and which option might be best for your career.",
-    image: newsFeatured,
+    image: articleWorkforceTech,
     sections: [
       {
         content: [
@@ -166,7 +175,7 @@ export const articles: Article[] = [
     date: "June 20, 2025",
     publishedDate: "June 20, 2025",
     excerpt: "A comprehensive guide to NHS staff banks—how they operate, who can join, and why they're becoming the preferred alternative to agency work.",
-    image: newsFeatured,
+    image: articleNhsTrust,
     sections: [
       {
         content: [
@@ -192,7 +201,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "A detailed pay comparison between collaborative bank shifts and agency locum work, revealing which option actually puts more money in your pocket.",
-    image: newsFeatured,
+    image: articlePayEarnings,
     sections: [
       {
         content: [
@@ -218,7 +227,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "A breakdown of NHS bank shift pay rates by band, including unsocial hours enhancements and how collaborative platforms can help you earn more.",
-    image: newsFeatured,
+    image: articlePayEarnings,
     sections: [
       {
         content: [
@@ -244,7 +253,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Understand how locum agency fees work, how much they really take, and how you can keep more of your earnings by going direct.",
-    image: newsFeatured,
+    image: articleAgencyCosts,
     sections: [
       {
         content: [
@@ -270,7 +279,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Compare the different ways to find NHS shifts—agencies, staff banks, and AI-powered platforms—and discover which method gives you the most control.",
-    image: newsFeatured,
+    image: articleNhsShifts,
     sections: [
       {
         content: [
@@ -288,8 +297,6 @@ export const articles: Article[] = [
       },
     ],
   },
-
-  // ─── PAGE 2: For Candidates ───────────────────────────────────────
   {
     slug: "where-to-find-the-best-paying-nhs-bank-shifts",
     title: "Where to Find the Best-Paying NHS Bank Shifts",
@@ -298,7 +305,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Discover where the highest-paying NHS bank shifts are, which specialties command premium rates, and how to position yourself for the best opportunities.",
-    image: newsFeatured,
+    image: articleFlexibleWork,
     sections: [
       {
         content: [
@@ -316,7 +323,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Explore the top-paying locum healthcare roles in the UK, from specialist nursing to consultant-level positions, and how to access them.",
-    image: newsFeatured,
+    image: articlePayEarnings,
     sections: [
       {
         content: [
@@ -334,7 +341,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Practical tips for finding higher-paying NHS locum shifts, including the best times, locations, and specialties for maximising your earnings.",
-    image: newsFeatured,
+    image: articleNhsShifts,
     sections: [
       {
         content: [
@@ -352,7 +359,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "A comprehensive overview of current NHS pay rates for bank and locum staff, including band-by-band breakdowns and enhancement rates.",
-    image: newsFeatured,
+    image: articleCompliance,
     sections: [
       {
         content: [
@@ -370,7 +377,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Learn how to access NHS shifts directly through staff banks and collaborative platforms, cutting out agency fees and keeping more of your pay.",
-    image: newsFeatured,
+    image: articleWorkforceTech,
     sections: [
       {
         content: [
@@ -388,7 +395,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Discover how healthcare professionals are increasingly working locum shifts without traditional agencies, and what platforms make it possible.",
-    image: newsFeatured,
+    image: articleCollaborative,
     sections: [
       {
         content: [
@@ -406,7 +413,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "A practical guide to working locum shifts directly with NHS Trusts, eliminating agency middlemen and maximising your take-home pay.",
-    image: newsFeatured,
+    image: articlePayEarnings,
     sections: [
       {
         content: [
@@ -424,7 +431,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Explore the key advantages of booking NHS shifts directly—from higher take-home pay to greater flexibility and simplified compliance.",
-    image: newsFeatured,
+    image: articleFlexibleWork,
     sections: [
       {
         content: [
@@ -442,7 +449,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Understand payment timelines for NHS locum shifts, what causes delays, and how to ensure you get paid as quickly as possible.",
-    image: newsFeatured,
+    image: articleCompliance,
     sections: [
       {
         content: [
@@ -460,7 +467,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Tips and strategies for speeding up your payments for locum and bank shifts, including the fastest payment platforms and common pitfalls to avoid.",
-    image: newsFeatured,
+    image: articleRegistration,
     sections: [
       {
         content: [
@@ -470,8 +477,6 @@ export const articles: Article[] = [
       },
     ],
   },
-
-  // ─── PAGE 3 ───────────────────────────────────────────────────────
   {
     slug: "simple-ways-to-speed-up-your-nhs-shift-payments",
     title: "Simple Ways to Speed Up Your NHS Shift Payments",
@@ -480,7 +485,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Practical advice for healthcare professionals on how to reduce payment delays for NHS shifts, from timesheet tips to platform selection.",
-    image: newsFeatured,
+    image: articleNhsShifts,
     sections: [
       {
         content: [
@@ -498,7 +503,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Explore the link between NHS staffing shortages and the growing elective backlog, and discover how collaborative staffing models can help Trusts recover.",
-    image: newsFeatured,
+    image: articleStaffingShortage,
     sections: [
       {
         content: [
@@ -516,7 +521,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Discover how persistent staffing gaps are forcing NHS Trusts to rethink their workforce strategies, from reactive agency use to proactive collaborative models.",
-    image: newsFeatured,
+    image: articleWorkforceTech,
     sections: [
       {
         content: [
@@ -534,7 +539,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Examine why short-term solutions to NHS rota gaps—like agency staff and overtime—are failing, and what sustainable alternatives look like.",
-    image: newsFeatured,
+    image: articleNhsTrust,
     sections: [
       {
         content: [
@@ -552,7 +557,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "An analysis of the structural factors making it increasingly difficult for NHS Trusts to fill shift gaps, and the emerging solutions addressing these challenges.",
-    image: newsFeatured,
+    image: articleStaffingShortage,
     sections: [
       {
         content: [
@@ -570,7 +575,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Explore the direct impact of staffing shortages on patient outcomes, safety incidents, and care quality across NHS Trusts.",
-    image: newsFeatured,
+    image: articleCollaborative,
     sections: [
       {
         content: [
@@ -588,7 +593,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "A call to action for Trust leaders: why the status quo in NHS staffing is unsustainable and what a modern approach looks like.",
-    image: newsFeatured,
+    image: articleAgencyCosts,
     sections: [
       {
         content: [
@@ -606,7 +611,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Understand why agency dependency is a growing threat to NHS financial sustainability and what Trust leaders can do to break the cycle.",
-    image: newsFeatured,
+    image: articleAgencyCosts,
     sections: [
       {
         content: [
@@ -624,7 +629,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Discover how relying on agencies for quick fixes is actually making NHS staffing problems worse in the long run, and what alternatives exist.",
-    image: newsFeatured,
+    image: articleNhsTrust,
     sections: [
       {
         content: [
@@ -642,7 +647,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "A practical roadmap for NHS Trusts looking to reduce their agency spend and build more sustainable, self-reliant workforce models.",
-    image: newsFeatured,
+    image: articleCollaborative,
     sections: [
       {
         content: [
@@ -652,8 +657,6 @@ export const articles: Article[] = [
       },
     ],
   },
-
-  // ─── PAGE 4: For Trusts ───────────────────────────────────────────
   {
     slug: "5-hidden-risks-of-relying-on-agency-staff-for-nhs-shift-cover",
     title: "5 Hidden Risks of Relying on Agency Staff for NHS Shift Cover",
@@ -662,7 +665,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Beyond the obvious cost, discover five hidden risks that come with relying on agency staff for NHS shift cover—and how to mitigate them.",
-    image: newsFeatured,
+    image: articleStaffingShortage,
     sections: [
       {
         content: [
@@ -680,7 +683,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Examine the growing financial pressure of agency spend on NHS Trusts and the cascading effects on budgets, services, and patient care.",
-    image: newsFeatured,
+    image: articleAgencyCosts,
     sections: [
       {
         content: [
@@ -698,7 +701,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Analyse why imposing budget caps on agency spending hasn't solved the problem and what structural changes are needed instead.",
-    image: newsFeatured,
+    image: articleWorkforceTech,
     sections: [
       {
         content: [
@@ -716,7 +719,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Identify the key factors behind the NHS's escalating agency costs, from workforce shortages to structural inefficiencies in the staffing market.",
-    image: newsFeatured,
+    image: articleNhsTrust,
     sections: [
       {
         content: [
@@ -734,7 +737,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Practical strategies for NHS Trusts to reduce agency dependence and redirect savings toward improved patient care and staff development.",
-    image: newsFeatured,
+    image: articleRegistration,
     sections: [
       {
         content: [
@@ -752,7 +755,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "A deep dive into how agency dependence is eroding NHS Trust budgets, creating a vicious cycle of overspending and underinvestment.",
-    image: newsFeatured,
+    image: articleAgencyCosts,
     sections: [
       {
         content: [

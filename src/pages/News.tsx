@@ -118,14 +118,14 @@ const News = () => {
                 className="group grid items-center gap-12 lg:grid-cols-[1.2fr_1fr]"
               >
                 {/* Left: large color block with category */}
-                <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-foreground flex flex-col justify-end lg:aspect-[4/3]">
-                  <img src={featured.image} alt={featured.title} className="absolute inset-0 h-full w-full object-cover opacity-40" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/60 to-transparent" />
+                <div className="relative aspect-[16/10] overflow-hidden rounded-2xl flex flex-col justify-end lg:aspect-[4/3]">
+                  <img src={featured.image} alt={featured.title} className="absolute inset-0 h-full w-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                   <div className="relative z-10 p-10">
                     <span className="mb-4 inline-block rounded-full bg-[#0075FF] px-4 py-1.5 text-xs font-semibold text-white">
                       {featured.category}
                     </span>
-                    <h2 className="text-3xl font-bold leading-tight text-primary-foreground md:text-4xl lg:text-5xl">
+                    <h2 className="text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl">
                       {featured.title}
                     </h2>
                   </div>
@@ -182,11 +182,11 @@ const News = () => {
                     to={regionPath(`/news/${article.slug}`)}
                     className="group block"
                   >
-                    <div className={`mb-6 overflow-hidden rounded-xl bg-foreground ${isWide ? "aspect-[21/9]" : "aspect-[16/10]"} relative`}>
-                      <img src={article.image} alt={article.title} className="absolute inset-0 h-full w-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent" />
+                    <div className={`mb-6 overflow-hidden rounded-xl ${isWide ? "aspect-[21/9]" : "aspect-[16/10]"} relative`}>
+                      <img src={article.image} alt={article.title} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                       <div className="absolute bottom-0 left-0 p-6">
-                        <span className="relative z-10 rounded-full bg-primary-foreground/10 px-3 py-1 text-xs font-medium text-primary-foreground/70 backdrop-blur-sm">
+                        <span className="relative z-10 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
                           {article.category}
                         </span>
                       </div>

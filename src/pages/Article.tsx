@@ -82,16 +82,16 @@ const Article = () => {
       <Navbar transparent />
 
       {/* ── HERO ── Full-bleed editorial header */}
-      <section className="relative min-h-[70vh] flex items-end overflow-hidden bg-foreground">
+      <section className="relative min-h-[70vh] flex items-end overflow-hidden">
         {/* Article hero image */}
-        <img src={article.image} alt={article.title} className="absolute inset-0 h-full w-full object-cover opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/70 to-foreground/30" />
+        <img src={article.image} alt={article.title} className="absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10" />
 
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-16 pt-40">
           <motion.div initial="hidden" animate="visible" variants={fadeUp}>
             <Link
               to={regionPath("/news")}
-              className="mb-10 inline-flex items-center gap-2 text-sm text-primary-foreground/40 transition-colors hover:text-primary-foreground"
+              className="mb-10 inline-flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"
             >
               <ArrowLeft size={14} />
               Knowledge Hub
@@ -101,11 +101,11 @@ const Article = () => {
               <span className="rounded-full bg-[#0075FF] px-4 py-1.5 text-xs font-semibold text-white">
                 {article.category}
               </span>
-              <span className="flex items-center gap-1.5 text-sm text-primary-foreground/40">
+              <span className="flex items-center gap-1.5 text-sm text-white/60">
                 <Calendar size={14} />
                 {article.publishedDate}
               </span>
-              <span className="flex items-center gap-1.5 text-sm text-primary-foreground/40">
+              <span className="flex items-center gap-1.5 text-sm text-white/60">
                 <Clock size={14} />
                 {article.readTime}
               </span>
@@ -116,7 +116,7 @@ const Article = () => {
               animate="visible"
               custom={1}
               variants={fadeUp}
-              className="max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight text-primary-foreground md:text-6xl lg:text-7xl"
+              className="max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-6xl lg:text-7xl"
             >
               {article.title}
             </motion.h1>
@@ -126,7 +126,7 @@ const Article = () => {
               animate="visible"
               custom={2}
               variants={fadeUp}
-              className="mt-8 max-w-2xl text-lg leading-relaxed text-primary-foreground/50 md:text-xl"
+              className="mt-8 max-w-2xl text-lg leading-relaxed text-white/60 md:text-xl"
             >
               {article.excerpt}
             </motion.p>
@@ -318,11 +318,11 @@ const Article = () => {
                     to={regionPath(`/news/${rel.slug}`)}
                     className="group block"
                   >
-                    <div className="mb-5 aspect-[16/10] overflow-hidden rounded-xl bg-foreground relative">
-                      <img src={rel.image} alt={rel.title} className="absolute inset-0 h-full w-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent" />
+                    <div className="mb-5 aspect-[16/10] overflow-hidden rounded-xl relative">
+                      <img src={rel.image} alt={rel.title} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                       <div className="absolute bottom-0 left-0 p-6">
-                        <span className="relative z-10 rounded-full bg-primary-foreground/10 px-3 py-1 text-xs font-medium text-primary-foreground/70 backdrop-blur-sm">
+                        <span className="relative z-10 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
                           {rel.category}
                         </span>
                       </div>
