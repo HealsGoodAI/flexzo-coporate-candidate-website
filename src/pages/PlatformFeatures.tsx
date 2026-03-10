@@ -75,6 +75,42 @@ const PlatformFeatures = () => {
         </div>
       </section>
 
+      {/* Candidate Features */}
+      <section className="py-28 lg:py-36">
+        <div className="mx-auto max-w-7xl px-6">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp} className="mb-16 text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#0075FF]">{t("Built specifically for healthcare professionals")}</p>
+            <h2 className="mt-4 text-4xl font-bold tracking-tight text-foreground md:text-5xl">{t("Features for Healthcare Professionals")}</h2>
+          </motion.div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {candidateFeatures.map((feature, i) => (
+              <motion.div key={feature.title} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={i} variants={fadeUp} className="group rounded-2xl border border-border bg-background p-8 transition-all hover:border-[#0075FF]/20 hover:shadow-lg">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#0075FF]/10 transition-colors group-hover:bg-[#0075FF]/20"><feature.icon className="h-6 w-6 text-[#0075FF]" /></div>
+                <h3 className="mb-3 text-lg font-semibold text-foreground">{t(feature.title)}</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">{t(feature.description)}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* One Profile CTA */}
+      <section className="relative bg-surface py-24 lg:py-32">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+            <h2 className="text-3xl font-bold text-foreground md:text-4xl">{t("One profile, endless possibilities")}</h2>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+              {t("With Flexzo AI, you join the UK's largest collaborative staff bank, opening doors to a wealth of opportunities you won't find anywhere else. Whether you're looking for a day shift, a short-term placement, or a permanent contract, our intelligent job board puts you in the driver's seat.")}
+            </p>
+            <p className="mt-4 text-lg font-medium text-foreground">{t("No waiting, no placement fees, just seamless hiring.")}</p>
+            <div className="mt-8">
+              <RegionLink href="/jobs" className="group inline-flex items-center gap-2 rounded-md bg-[#0075FF] px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-[#0060D0]">{t("Register Now")} <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" /></RegionLink>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Hospital Features */}
       <section className="py-28 lg:py-36">
         <div className="mx-auto max-w-7xl px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp} className="mb-16 text-center">
