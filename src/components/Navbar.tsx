@@ -37,7 +37,7 @@ const simpleLinks: Record<string, string> = {
   Contact: "/contact",
 };
 
-const navItems = ["Jobs", "Products", "Explore Careers", "Features", "News", "Contact"];
+const navItems = ["Jobs", "Explore Careers", "Products", "Features", "News", "Contact"];
 
 interface NavbarProps {
   transparent?: boolean;
