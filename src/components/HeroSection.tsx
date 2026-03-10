@@ -48,8 +48,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 text-base sm:text-lg text-primary-foreground/80"
           >
-            {t("Our agentic system doesn't just fill shifts. It identifies workforce gaps, activates the right supply tier, validates compliance in real time, and routes demand to the lowest-cost safe option —")}{" "}
-            <strong className="text-primary-foreground">{t("automatically")}</strong>.
+          {t("Join Flexzo today and take control of your healthcare career.")}
           </motion.p>
 
           <motion.div
