@@ -20,73 +20,74 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20">
-      {/* Background image */}
+      {/* Background image – no overlay */}
       <div className="absolute inset-0">
         <img
           src={heroNurse}
           alt="Healthcare professional"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-background/80" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 text-center">
-         <motion.div
-           initial={{ opacity: 0, filter: "blur(12px)" }}
-           animate={{ opacity: 1, filter: "blur(0px)" }}
-           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-           className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-7xl"
-         >
-          {t("An Agentic AI")}
-          <br />
-          {t("Workforce System")}
-          <br />
-          <span className="text-[#0075FF]">
-            {t("for")}{" "}
-            <AnimatePresence mode="wait">
-              <motion.span
-                key={sectorIndex}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4 }}
-                className="inline-block"
-              >
-                {sectors[sectorIndex]}
-              </motion.span>
-            </AnimatePresence>
-          </span>
-        </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="mx-auto mt-6 max-w-2xl text-base sm:text-lg text-muted-foreground px-2"
-        >
-          {t("Our agentic system doesn't just fill shifts. It identifies workforce gaps, activates the right supply tier, validates compliance in real time, and routes demand to the lowest-cost safe option —")}{" "}
-          <strong className="text-foreground">{t("automatically")}</strong>.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="mt-10 flex flex-wrap items-center justify-center gap-4"
-        >
-          <RegionLink
-            href="/book-demo"
-            className="rounded-md bg-primary px-8 py-3.5 font-display text-sm font-semibold text-primary-foreground transition-all hover:bg-[#0075FF] hover:text-white"
+      <div className="relative z-10 mx-auto max-w-7xl w-full px-6 py-20">
+        <div className="max-w-2xl">
+          <motion.div
+            initial={{ opacity: 0, filter: "blur(12px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="font-display text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl md:text-5xl lg:text-7xl"
           >
-            {t("Book a Demo")}
-          </RegionLink>
-          <a
-            href="#features"
-            className="rounded-md border border-border bg-background/80 backdrop-blur-sm px-8 py-3.5 font-display text-sm font-semibold text-foreground transition-all hover:bg-[#0075FF] hover:text-white hover:border-[#0075FF]"
+            {t("An Agentic AI")}
+            <br />
+            {t("Workforce System")}
+            <br />
+            <span className="text-[#0075FF]">
+              {t("for")}{" "}
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={sectorIndex}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.4 }}
+                  className="inline-block"
+                >
+                  {sectors[sectorIndex]}
+                </motion.span>
+              </AnimatePresence>
+            </span>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="mt-6 text-base sm:text-lg text-primary-foreground/80"
           >
-            {t("Learn More")}
-          </a>
-        </motion.div>
+            {t("Our agentic system doesn't just fill shifts. It identifies workforce gaps, activates the right supply tier, validates compliance in real time, and routes demand to the lowest-cost safe option —")}{" "}
+            <strong className="text-primary-foreground">{t("automatically")}</strong>.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="mt-10 flex flex-wrap items-center gap-4"
+          >
+            <RegionLink
+              href="/book-demo"
+              className="rounded-md bg-primary px-8 py-3.5 font-display text-sm font-semibold text-primary-foreground transition-all hover:bg-[#0075FF] hover:text-white"
+            >
+              {t("Book a Demo")}
+            </RegionLink>
+            <a
+              href="#features"
+              className="rounded-md border border-primary-foreground/30 bg-primary-foreground/10 backdrop-blur-sm px-8 py-3.5 font-display text-sm font-semibold text-primary-foreground transition-all hover:bg-[#0075FF] hover:text-white hover:border-[#0075FF]"
+            >
+              {t("Learn More")}
+            </a>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
