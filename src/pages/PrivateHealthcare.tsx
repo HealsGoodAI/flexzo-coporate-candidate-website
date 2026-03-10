@@ -424,7 +424,7 @@ const PrivateHealthcare = () => {
             variants={fadeUp}
             className="mt-12"
           >
-            <BookDemoButton />
+            <RegisterButton />
           </motion.div>
         </div>
       </section>
