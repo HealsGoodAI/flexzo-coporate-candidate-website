@@ -101,11 +101,11 @@ const Article = () => {
               <span className="rounded-full bg-[#0075FF] px-4 py-1.5 text-xs font-semibold text-white">
                 {article.category}
               </span>
-              <span className="flex items-center gap-1.5 text-sm text-primary-foreground/40">
+              <span className="flex items-center gap-1.5 text-sm text-white/60">
                 <Calendar size={14} />
                 {article.publishedDate}
               </span>
-              <span className="flex items-center gap-1.5 text-sm text-primary-foreground/40">
+              <span className="flex items-center gap-1.5 text-sm text-white/60">
                 <Clock size={14} />
                 {article.readTime}
               </span>
