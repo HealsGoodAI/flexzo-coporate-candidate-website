@@ -32,9 +32,9 @@ const whyChoose = [
   "AI-first approach that goes beyond simply digitising existing recruitment models",
 ];
 
-const BookDemoButton = ({ t }: { t: (s: string) => string }) => (
-  <RegionLink href="/book-demo" className="group inline-flex items-center gap-2 rounded-md bg-[#0075FF] px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-[#0060D0]">
-    {t("Book a Demo")} <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+const RegisterButton = ({ t }: { t: (s: string) => string }) => (
+  <RegionLink href="/register" className="group inline-flex items-center gap-2 rounded-md bg-[#0075FF] px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-[#0060D0]">
+    {t("Register")} <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
   </RegionLink>
 );
 
