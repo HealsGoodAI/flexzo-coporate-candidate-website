@@ -18,13 +18,15 @@ const footerColumns = [
     ],
   },
   {
-    title: "Sectors",
+    title: "Explore Careers",
     links: [
-      { label: "Hospitals", href: "/sectors/hospitals" },
-      { label: "Primary Care", href: "/sectors/primary-care" },
-      { label: "Private Healthcare", href: "/sectors/private-healthcare" },
-      { label: "Pharmacy", href: "/sectors/pharmacy" },
-      { label: "Social Care", href: "/sectors/social-care" },
+      { label: "Allied Health Professionals", href: "/careers/allied-health-professionals" },
+      { label: "Doctors", href: "/careers/doctors" },
+      { label: "Nursing", href: "/careers/nursing" },
+      { label: "Pharmacy", href: "/careers/pharmacy" },
+      { label: "Psychological Professions", href: "/careers/psychology" },
+      { label: "Midwifery", href: "/careers/midwifery" },
+      { label: "Estates & Facilities", href: "/careers/estates-and-facilities" },
     ],
     subsection: {
       title: "Company",

@@ -19,12 +19,14 @@ const dropdownMenus: Record<string, { label: string; href: string }[]> = {
     { label: "Employee App", href: "/products/employee-app" },
     { label: "Rostering", href: "/products/rostering" },
   ],
-  Sectors: [
-    { label: "Hospitals", href: "/sectors/hospitals" },
-    { label: "Primary Care", href: "/sectors/primary-care" },
-    { label: "Private Healthcare", href: "/sectors/private-healthcare" },
-    { label: "Pharmacy", href: "/sectors/pharmacy" },
-    { label: "Social Care", href: "/sectors/social-care" },
+  "Explore Careers": [
+    { label: "Allied Health Professionals", href: "/careers/allied-health-professionals" },
+    { label: "Doctors", href: "/careers/doctors" },
+    { label: "Nursing", href: "/careers/nursing" },
+    { label: "Pharmacy", href: "/careers/pharmacy" },
+    { label: "Psychological Professions", href: "/careers/psychology" },
+    { label: "Midwifery", href: "/careers/midwifery" },
+    { label: "Estates & Facilities", href: "/careers/estates-and-facilities" },
   ],
 };
 
@@ -35,7 +37,7 @@ const simpleLinks: Record<string, string> = {
   Contact: "/contact",
 };
 
-const navItems = ["Products", "Sectors", "Features", "News", "Jobs", "Contact"];
+const navItems = ["Products", "Explore Careers", "Features", "News", "Jobs", "Contact"];
 
 interface NavbarProps {
   transparent?: boolean;

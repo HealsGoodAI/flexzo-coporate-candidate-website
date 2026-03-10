@@ -30,11 +30,13 @@ import BookDemo from "./pages/BookDemo";
 import BookDemoSuccess from "./pages/BookDemoSuccess";
 import Contact from "./pages/Contact";
 import ContactSuccess from "./pages/ContactSuccess";
-import PrimaryCare from "./pages/PrimaryCare";
-import Hospitals from "./pages/Hospitals";
-import PrivateHealthcare from "./pages/PrivateHealthcare";
-import Pharmacy from "./pages/Pharmacy";
-import SocialCare from "./pages/SocialCare";
+import AlliedHealthProfessionals from "./pages/careers/AlliedHealthProfessionals";
+import Doctors from "./pages/careers/Doctors";
+import Nursing from "./pages/careers/Nursing";
+import PharmacyCareers from "./pages/careers/PharmacyCareers";
+import Psychology from "./pages/careers/Psychology";
+import Midwifery from "./pages/careers/Midwifery";
+import EstatesAndFacilities from "./pages/careers/EstatesAndFacilities";
 import Rostering from "./pages/Rostering";
 import CarbonReductionPlan from "./pages/CarbonReductionPlan";
 import Team from "./pages/Team";
@@ -86,11 +88,13 @@ const App = () => (
             <Route path="book-demo/success" element={<BookDemoSuccess />} />
             <Route path="contact" element={<Contact />} />
             <Route path="contact/success" element={<ContactSuccess />} />
-            <Route path="sectors/primary-care" element={<PrimaryCare />} />
-            <Route path="sectors/hospitals" element={<Hospitals />} />
-            <Route path="sectors/private-healthcare" element={<PrivateHealthcare />} />
-            <Route path="sectors/pharmacy" element={<Pharmacy />} />
-            <Route path="sectors/social-care" element={<SocialCare />} />
+            <Route path="careers/allied-health-professionals" element={<AlliedHealthProfessionals />} />
+            <Route path="careers/doctors" element={<Doctors />} />
+            <Route path="careers/nursing" element={<Nursing />} />
+            <Route path="careers/pharmacy" element={<PharmacyCareers />} />
+            <Route path="careers/psychology" element={<Psychology />} />
+            <Route path="careers/midwifery" element={<Midwifery />} />
+            <Route path="careers/estates-and-facilities" element={<EstatesAndFacilities />} />
             <Route path="internal/email-test" element={<EmailTemplateTest />} />
             <Route path="*" element={<NotFound />} />
           </Route>

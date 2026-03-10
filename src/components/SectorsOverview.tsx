@@ -3,49 +3,49 @@ import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState, useCallback } from "react";
 import { useRegion } from "@/hooks/useRegion";
-import hospitalsHero from "@/assets/hospitals-hero.jpg";
-import primaryCareHero from "@/assets/primary-care.jpg";
-import privateHealthcareHero from "@/assets/private-healthcare.jpg";
-import pharmacyHero from "@/assets/community-pharmacy.jpg";
-import socialCareHero from "@/assets/social-care-hero.jpg";
+import careerAhp from "@/assets/career-ahp.jpg";
+import careerDoctors from "@/assets/career-doctors.jpg";
+import careerNursing from "@/assets/career-nursing.jpg";
+import careerPharmacy from "@/assets/career-pharmacy.jpg";
+import careerMidwifery from "@/assets/career-midwifery.jpg";
 import { useRegionText } from "@/lib/regionalize";
 import ScrollReveal from "./ScrollReveal";
 
 const sectors = [
   {
-    title: "NHS Trusts & Hospitals",
+    title: "Allied Health Professionals",
     description:
-      "End-to-end workforce automation for acute, community and mental health trusts — from internal bank to agency cascade.",
-    image: hospitalsHero,
-    href: "/sectors/hospitals",
+      "15 unique roles from physiotherapy to radiography — helping patients live their lives to the fullest.",
+    image: careerAhp,
+    href: "/careers/allied-health-professionals",
   },
   {
-    title: "Primary Care",
+    title: "Doctors",
     description:
-      "Zero-fee staffing for GP practices with AI-powered matching and compliance built in.",
-    image: primaryCareHero,
-    href: "/sectors/primary-care",
+      "Over 50 specialties to choose from with world-class training and the chance to change lives every day.",
+    image: careerDoctors,
+    href: "/careers/doctors",
   },
   {
-    title: "Private Healthcare",
+    title: "Nursing",
     description:
-      "Premium talent pipelines and credential management for independent providers.",
-    image: privateHealthcareHero,
-    href: "/sectors/private-healthcare",
+      "One of the most dynamic and rewarding roles in the NHS — work across hospitals, communities, and beyond.",
+    image: careerNursing,
+    href: "/careers/nursing",
   },
   {
-    title: "Community Pharmacy",
+    title: "Pharmacy",
     description:
-      "Rapid locum cover and compliance automation purpose-built for pharmacy.",
-    image: pharmacyHero,
-    href: "/sectors/pharmacy",
+      "Expert knowledge of medicines combined with growing clinical responsibility at the heart of communities.",
+    image: careerPharmacy,
+    href: "/careers/pharmacy",
   },
   {
-    title: "Social Care",
+    title: "Midwifery",
     description:
-      "AI-powered workforce automation for care homes — reducing agency costs, improving fill rates, and giving managers back their time.",
-    image: socialCareHero,
-    href: "/sectors/social-care",
+      "Be at the very start of a family's journey — supporting women through pregnancy, birth, and beyond.",
+    image: careerMidwifery,
+    href: "/careers/midwifery",
   },
 ];
 
@@ -78,10 +78,10 @@ const SectorsOverview = () => {
         <div className="mb-14 flex items-end justify-between">
           <ScrollReveal animation="fade-right">
             <span className="mb-3 inline-block text-xs font-medium uppercase tracking-widest text-background/40">
-              {t("Sectors We Serve")}
+              {t("Explore Careers")}
             </span>
             <h2 className="max-w-xl font-display text-3xl font-bold text-background md:text-4xl">
-              {t("Built for every corner of healthcare")}
+              {t("Discover your NHS career path")}
             </h2>
           </ScrollReveal>
           <div className="hidden items-center gap-2 md:flex">
