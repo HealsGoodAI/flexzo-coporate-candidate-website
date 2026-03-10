@@ -37,25 +37,9 @@ const HeroSection = () => {
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             className="font-display text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl md:text-5xl lg:text-7xl"
           >
-            {t("An Agentic AI")}
+            {t("Healthcare Careers,")}
             <br />
-            {t("Workforce System")}
-            <br />
-            <span className="text-[#0075FF]">
-              {t("for")}{" "}
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={sectorIndex}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.4 }}
-                  className="inline-block"
-                >
-                  {sectors[sectorIndex]}
-                </motion.span>
-              </AnimatePresence>
-            </span>
+            {t("Re-imagined")}
           </motion.div>
 
           <motion.p
