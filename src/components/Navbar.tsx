@@ -179,14 +179,14 @@ const Navbar = ({ transparent = false }: NavbarProps) => {
             })}
             <div className="flex items-center">
               <a
-                href={resolveHref("/book-demo")}
+                href={resolveHref("/register")}
                 className={`rounded-md px-6 py-2.5 text-sm font-medium transition-all ${
                   isTransparent
                     ? "bg-white/10 text-white border border-white/20 hover:bg-[#0075FF] hover:border-[#0075FF]"
                     : "bg-primary text-primary-foreground hover:bg-[#0075FF] hover:text-white"
                 }`}
               >
-                Book a demo
+                Register
               </a>
             </div>
             {/* Region dropdown */}
