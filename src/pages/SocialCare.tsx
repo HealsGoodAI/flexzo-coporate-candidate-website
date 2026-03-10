@@ -59,7 +59,7 @@ const SocialCare = () => {
               {t("Flexzo replaces fragmented, agency-led processes with intelligent automation — helping care homes radically reduce staffing costs while improving fill rates, control, and staff experience.")}
             </motion.p>
             <motion.div initial="hidden" animate="visible" custom={2} variants={fadeUp} className="mt-12 flex flex-wrap gap-4">
-              <BookDemoButton t={t} />
+              <RegisterButton t={t} />
               <RegionLink href="/contact" className="inline-flex items-center gap-2 rounded-md border border-primary-foreground/20 px-8 py-4 text-sm font-semibold text-primary-foreground transition-colors hover:border-primary-foreground/40">{t("Contact Sales")}</RegionLink>
             </motion.div>
           </motion.div>
