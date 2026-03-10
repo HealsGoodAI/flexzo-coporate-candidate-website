@@ -40,6 +40,7 @@ import EstatesAndFacilities from "./pages/careers/EstatesAndFacilities";
 import Rostering from "./pages/Rostering";
 import CarbonReductionPlan from "./pages/CarbonReductionPlan";
 import Team from "./pages/Team";
+import WhyJoinFlexzo from "./pages/WhyJoinFlexzo";
 import EmailTemplateTest from "./pages/EmailTemplateTest";
 import NotFound from "./pages/NotFound";
 
