@@ -71,6 +71,7 @@ const App = () => (
             <Route path="products/rostering" element={<Rostering />} />
             <Route path="platform-features" element={<PlatformFeatures />} />
             <Route path="why-join-flexzo" element={<WhyJoinFlexzo />} />
+            <Route path="how-to-apply" element={<HowToApply />} />
             <Route path="jobs" element={<Jobs />} />
             <Route path="jobs/search" element={<JobSearchResults />} />
             <Route path="jobs/:id" element={<JobDetail />} />
