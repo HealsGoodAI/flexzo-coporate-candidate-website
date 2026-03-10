@@ -117,7 +117,7 @@ const PrivateHealthcare = () => {
               variants={fadeUp}
               className="mt-12 flex flex-wrap gap-4"
             >
-              <BookDemoButton />
+              <RegisterButton />
               <RegionLink
                 href="/contact"
                 className="inline-flex items-center gap-2 rounded-md border border-primary-foreground/20 px-8 py-4 text-sm font-semibold text-primary-foreground transition-colors hover:border-primary-foreground/40"
