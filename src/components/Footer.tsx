@@ -6,7 +6,7 @@ import { useRegionText } from "@/lib/regionalize";
 
 const footerColumns = [
   {
-    title: "Products",
+    title: "Benefits",
     links: [
       { label: "Platform Features", href: "/platform-features" },
       { label: "Employee App", href: "/products/employee-app" },
