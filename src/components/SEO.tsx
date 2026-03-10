@@ -83,7 +83,7 @@ export const organizationSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "sales",
-    url: "https://flexzo.ai/uk/book-demo",
+    url: "https://flexzo.ai/uk/register",
   },
 };
 
