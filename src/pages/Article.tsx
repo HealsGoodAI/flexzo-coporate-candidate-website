@@ -91,7 +91,7 @@ const Article = () => {
           <motion.div initial="hidden" animate="visible" variants={fadeUp}>
             <Link
               to={regionPath("/news")}
-              className="mb-10 inline-flex items-center gap-2 text-sm text-primary-foreground/40 transition-colors hover:text-primary-foreground"
+              className="mb-10 inline-flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"
             >
               <ArrowLeft size={14} />
               Knowledge Hub
