@@ -8,12 +8,7 @@ const footerColumns = [
   {
     title: "Products",
     links: [
-      { label: "AI Sourcing", href: "/products/ai-sourcing" },
-      { label: "Internal Staff Bank", href: "/products/internal-staff-bank" },
-      { label: "Collaborative Staff Bank", href: "#" },
-      { label: "National Staff Bank", href: "/products/national-staff-bank" },
-      { label: "Amplify", href: "/products/amplify" },
-      { label: "Clinical Services Planner", href: "/products/clinical-services-planner" },
+      { label: "Platform Features", href: "/platform-features" },
       { label: "Employee App", href: "/products/employee-app" },
     ],
   },
