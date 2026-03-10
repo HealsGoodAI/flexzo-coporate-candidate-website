@@ -150,10 +150,10 @@ const AiSourcing = () => {
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <RegionLink
-                  href="/book-demo"
+                  href="/register"
                   className="group inline-flex items-center gap-2 rounded-md bg-[#0075FF] px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-[#0060D0]"
                 >
-                  Book a Demo
+                  Register
                   <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
                 </RegionLink>
                 <RegionLink
