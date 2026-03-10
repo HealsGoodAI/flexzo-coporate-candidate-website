@@ -231,7 +231,7 @@ const PrivateHealthcare = () => {
               source and book staff directly through an intelligent workforce platform.
             </p>
             <div className="mt-12">
-              <BookDemoButton />
+              <RegisterButton />
             </div>
           </motion.div>
         </div>
