@@ -152,7 +152,7 @@ const Pharmacy = () => {
               {t("Looking for a smarter way to manage pharmacy staffing and recruitment? Book a demo today and discover how Flexzo.ai can help your pharmacy reduce rota gaps, lower agency spend, and improve operational efficiency.")}
             </p>
             <div className="mt-12 flex flex-wrap justify-center gap-4">
-              <BookDemoButton t={t} />
+              <RegisterButton t={t} />
               <RegionLink href="/contact" className="inline-flex items-center gap-2 rounded-md border border-border px-8 py-4 text-sm font-semibold text-foreground transition-colors hover:bg-muted">{t("Contact Sales")}</RegionLink>
             </div>
           </motion.div>
