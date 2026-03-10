@@ -10,13 +10,12 @@ export interface ApplicationEmailParams {
   region?: string;
 }
 
-export interface BookDemoEmailParams {
-  name: string;
+export interface RegistrationEmailParams {
+  firstName: string;
+  lastName: string;
   email: string;
   telephone: string;
-  organisation: string;
-  date: string;
-  time: string;
+  cvFile: File;
 }
 
 export interface ContactEmailParams {

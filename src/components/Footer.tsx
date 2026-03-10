@@ -41,7 +41,7 @@ const footerColumns = [
     links: [
       { label: "Jobs", href: "/jobs" },
       { label: "News", href: "/news" },
-      { label: "Book a Demo", href: "/book-demo" },
+      { label: "Register", href: "/register" },
       { label: "Contact Us", href: "/contact" },
       { label: "Events", href: "#" },
       { label: "Careers", href: "#" },

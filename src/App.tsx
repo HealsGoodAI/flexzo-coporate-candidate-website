@@ -79,6 +79,9 @@ const App = () => (
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
             <Route path="carbon-reduction-plan" element={<CarbonReductionPlan />} />
             <Route path="team" element={<Team />} />
+            <Route path="register" element={<BookDemo />} />
+            <Route path="register/success" element={<BookDemoSuccess />} />
+            {/* Legacy redirects */}
             <Route path="book-demo" element={<BookDemo />} />
             <Route path="book-demo/success" element={<BookDemoSuccess />} />
             <Route path="contact" element={<Contact />} />
