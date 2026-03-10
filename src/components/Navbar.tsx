@@ -363,14 +363,14 @@ const Navbar = ({ transparent = false }: NavbarProps) => {
               </nav>
 
               <motion.a
-                href={resolveHref("/book-demo")}
+                href={resolveHref("/register")}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.4 }}
                 className="mt-8 inline-block rounded-md bg-[#0075FF] px-8 py-4 text-center text-sm font-semibold text-white transition-colors hover:bg-[#0060D0]"
                 onClick={() => setMobileOpen(false)}
               >
-                Book a demo
+                Register
               </motion.a>
             </div>
 

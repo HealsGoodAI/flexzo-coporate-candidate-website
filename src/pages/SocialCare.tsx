@@ -160,7 +160,7 @@ const SocialCare = () => {
               {t("See how Flexzo can help your care organisation reduce temporary staffing costs, improve fill rates, and give managers back their time. Modular by design — start where the pressure is greatest.")}
             </p>
             <div className="mt-12 flex flex-wrap justify-center gap-4">
-              <BookDemoButton t={t} />
+              <RegisterButton t={t} />
               <RegionLink href="/contact" className="inline-flex items-center gap-2 rounded-md border border-border px-8 py-4 text-sm font-semibold text-foreground transition-colors hover:bg-muted">{t("Contact Sales")}</RegionLink>
             </div>
           </motion.div>
