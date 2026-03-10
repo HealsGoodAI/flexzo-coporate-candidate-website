@@ -126,7 +126,7 @@ const Article = () => {
               animate="visible"
               custom={2}
               variants={fadeUp}
-              className="mt-8 max-w-2xl text-lg leading-relaxed text-primary-foreground/50 md:text-xl"
+              className="mt-8 max-w-2xl text-lg leading-relaxed text-white/60 md:text-xl"
             >
               {article.excerpt}
             </motion.p>
