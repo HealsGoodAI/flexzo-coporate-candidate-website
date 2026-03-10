@@ -182,11 +182,11 @@ const News = () => {
                     to={regionPath(`/news/${article.slug}`)}
                     className="group block"
                   >
-                    <div className={`mb-6 overflow-hidden rounded-xl bg-foreground ${isWide ? "aspect-[21/9]" : "aspect-[16/10]"} relative`}>
-                      <img src={article.image} alt={article.title} className="absolute inset-0 h-full w-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent" />
+                    <div className={`mb-6 overflow-hidden rounded-xl ${isWide ? "aspect-[21/9]" : "aspect-[16/10]"} relative`}>
+                      <img src={article.image} alt={article.title} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                       <div className="absolute bottom-0 left-0 p-6">
-                        <span className="relative z-10 rounded-full bg-primary-foreground/10 px-3 py-1 text-xs font-medium text-primary-foreground/70 backdrop-blur-sm">
+                        <span className="relative z-10 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
                           {article.category}
                         </span>
                       </div>
