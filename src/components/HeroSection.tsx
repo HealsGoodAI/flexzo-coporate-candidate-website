@@ -37,25 +37,9 @@ const HeroSection = () => {
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             className="font-display text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl md:text-5xl lg:text-7xl"
           >
-            {t("An Agentic AI")}
+            {t("Healthcare Careers,")}
             <br />
-            {t("Workforce System")}
-            <br />
-            <span className="text-[#0075FF]">
-              {t("for")}{" "}
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={sectorIndex}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.4 }}
-                  className="inline-block"
-                >
-                  {sectors[sectorIndex]}
-                </motion.span>
-              </AnimatePresence>
-            </span>
+            {t("Re-imagined")}
           </motion.div>
 
           <motion.p
@@ -64,8 +48,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 text-base sm:text-lg text-primary-foreground/80"
           >
-            {t("Our agentic system doesn't just fill shifts. It identifies workforce gaps, activates the right supply tier, validates compliance in real time, and routes demand to the lowest-cost safe option —")}{" "}
-            <strong className="text-primary-foreground">{t("automatically")}</strong>.
+          {t("Join Flexzo today and take control of your healthcare career.")}
           </motion.p>
 
           <motion.div
