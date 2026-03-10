@@ -88,11 +88,13 @@ const App = () => (
             <Route path="book-demo/success" element={<BookDemoSuccess />} />
             <Route path="contact" element={<Contact />} />
             <Route path="contact/success" element={<ContactSuccess />} />
-            <Route path="sectors/primary-care" element={<PrimaryCare />} />
-            <Route path="sectors/hospitals" element={<Hospitals />} />
-            <Route path="sectors/private-healthcare" element={<PrivateHealthcare />} />
-            <Route path="sectors/pharmacy" element={<Pharmacy />} />
-            <Route path="sectors/social-care" element={<SocialCare />} />
+            <Route path="careers/allied-health-professionals" element={<AlliedHealthProfessionals />} />
+            <Route path="careers/doctors" element={<Doctors />} />
+            <Route path="careers/nursing" element={<Nursing />} />
+            <Route path="careers/pharmacy" element={<PharmacyCareers />} />
+            <Route path="careers/psychology" element={<Psychology />} />
+            <Route path="careers/midwifery" element={<Midwifery />} />
+            <Route path="careers/estates-and-facilities" element={<EstatesAndFacilities />} />
             <Route path="internal/email-test" element={<EmailTemplateTest />} />
             <Route path="*" element={<NotFound />} />
           </Route>
