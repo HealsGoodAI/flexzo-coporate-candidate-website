@@ -20,7 +20,7 @@ const Index = () => {
         path={`/${region}`}
         jsonLd={[organizationSchema, websiteSchema]}
       />
-      <Navbar />
+      <Navbar transparent />
       <HeroSection />
       <PressBanner />
       <BenefitsSection />
