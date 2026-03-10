@@ -127,7 +127,7 @@ const Footer = () => {
               href={resolveHref("/book-demo")}
               className="mt-8 inline-block rounded-lg border border-primary-foreground/30 px-8 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-[#0075FF] hover:text-white hover:border-[#0075FF]"
             >
-              {t("Book a Demo")}
+              {t("Register")}
             </a>
           </div>
 

@@ -420,14 +420,14 @@ const EmployeeApp = () => {
               {t("Ready to")} <span className="text-[#0075FF]">{t("empower your workforce")}</span>?
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
-              {t("Book a demo and see how the Employee App can improve fill rates, reduce agency spend and give clinicians control.")}
+              {t("Register today and see how the Employee App can improve fill rates, reduce agency spend and give clinicians control.")}
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <RegionLink
                 href="/register"
                 className="group inline-flex items-center gap-2 rounded-md bg-primary px-10 py-4 text-sm font-semibold text-primary-foreground transition-all hover:bg-[#0075FF] hover:text-white"
               >
-                {t("Book a Demo")}
+                {t("Register")}
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </RegionLink>
               <RegionLink

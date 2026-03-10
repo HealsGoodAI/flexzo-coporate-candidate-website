@@ -426,14 +426,14 @@ const CollaborativeStaffBank = () => {
               {t("Ready to build a")} <span className="text-[#0075FF]">{t("shared bank")}</span>?
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
-              {t("Book a demo and discover how Flexzo Collaborative Staff Bank can transform fragmented local pools into governed regional resilience.")}
+              {t("Register today and discover how Flexzo Collaborative Staff Bank can transform fragmented local pools into governed regional resilience.")}
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <RegionLink
                 href="/register"
                 className="group inline-flex items-center gap-2 rounded-md bg-primary px-10 py-4 text-sm font-semibold text-primary-foreground transition-all hover:bg-[#0075FF] hover:text-white"
               >
-                {t("Book a Demo")}
+                {t("Register")}
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </RegionLink>
               <RegionLink
