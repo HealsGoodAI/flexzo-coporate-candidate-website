@@ -211,23 +211,23 @@ const Hospitals = () => {
         </div>
       </section>
 
-      {/* ── BOOK A DEMO CTA ── */}
+      {/* ── REGISTER CTA ── */}
       <section className="border-t border-border bg-muted/30 py-28 lg:py-36">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
             <Sparkles className="mx-auto mb-6 h-10 w-10 text-[#0075FF]" />
             <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-              Book a <span className="text-[#0075FF]">Demo</span>
+              Register <span className="text-[#0075FF]">Today</span>
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-              {t("Looking for a smarter way to manage NHS staffing and workforce planning? Book a demo today and discover how Flexzo.ai can help your Trust reduce agency spend, improve shift coverage, and deliver services more efficiently.")}
+              {t("Looking for a smarter way to manage NHS staffing and workforce planning? Register today and discover how Flexzo.ai can help your Trust reduce agency spend, improve shift coverage, and deliver services more efficiently.")}
             </p>
             <div className="mt-12 flex flex-wrap justify-center gap-4">
               <RegionLink
-                href="/book-demo"
+                href="/register"
                 className="group inline-flex items-center gap-2 rounded-md bg-[#0075FF] px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-[#0060D0]"
               >
-                Book a Demo
+                Register
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </RegionLink>
               <RegionLink
