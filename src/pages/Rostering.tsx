@@ -71,7 +71,7 @@ const Rostering = () => {
                 {t("The only end-to-end roster solution built for multi-professional health and care teams. Fully integrated rostering, absence management, temporary staffing and real-time command — giving you complete control of costs, quality and staff experience.")}
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
-                <RegionLink href="/book-demo" className="group inline-flex items-center gap-2 rounded-md bg-[#0075FF] px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-[#0060D0]">{t("Book a Demo")} <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" /></RegionLink>
+                <RegionLink href="/register" className="group inline-flex items-center gap-2 rounded-md bg-[#0075FF] px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-[#0060D0]">{t("Register")} <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" /></RegionLink>
                 <RegionLink href="/contact" className="inline-flex items-center gap-2 rounded-md border border-primary-foreground/20 px-8 py-4 text-sm font-semibold text-primary-foreground transition-colors hover:border-primary-foreground/40">{t("Contact Sales")}</RegionLink>
               </div>
             </motion.div>
