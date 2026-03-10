@@ -497,7 +497,7 @@ const PrivateHealthcare = () => {
               and streamline staffing operations.
             </p>
             <div className="mt-12 flex flex-wrap justify-center gap-4">
-              <BookDemoButton />
+              <RegisterButton />
               <RegionLink
                 href="/contact"
                 className="inline-flex items-center gap-2 rounded-md border border-border px-8 py-4 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
