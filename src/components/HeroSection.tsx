@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import AgentNetwork from "./AgentNetwork";
 import { useRegionText } from "@/lib/regionalize";
+import heroNurse from "@/assets/hero-nurse.png";
 import RegionLink from "./RegionLink";
-import ScrollReveal from "./ScrollReveal";
 
 const sectors_uk = ["NHS Trusts", "Primary Care", "Community Pharmacy", "Mental Health"];
 
@@ -21,8 +20,15 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20">
-      <div className="absolute inset-0 bg-background/70" />
-      <AgentNetwork />
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img
+          src={heroNurse}
+          alt="Healthcare professional"
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-background/80" />
+      </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 text-center">
          <motion.div
