@@ -124,7 +124,7 @@ const Footer = () => {
             </p>
 
             <a
-              href={resolveHref("/book-demo")}
+              href={resolveHref("/register")}
               className="mt-8 inline-block rounded-lg border border-primary-foreground/30 px-8 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-[#0075FF] hover:text-white hover:border-[#0075FF]"
             >
               {t("Register")}

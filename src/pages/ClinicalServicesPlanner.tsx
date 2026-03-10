@@ -417,10 +417,10 @@ const ClinicalServicesPlanner = () => {
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <RegionLink
-                href="/book-demo"
+                href="/register"
                 className="group inline-flex items-center gap-2 rounded-md bg-primary px-10 py-4 text-sm font-semibold text-primary-foreground transition-all hover:bg-[#0075FF] hover:text-white"
               >
-                Book a Demo
+                Register
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </RegionLink>
               <RegionLink
