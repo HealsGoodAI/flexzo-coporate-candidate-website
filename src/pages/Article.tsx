@@ -229,10 +229,10 @@ const Article = () => {
                     Discover how Flexzo AI can help your organisation reduce costs and improve fill rates.
                   </p>
                   <a
-                    href="/book-demo"
+                    href="/register"
                     className="inline-flex items-center gap-2 rounded-md bg-[#0075FF] px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-[#0060D0]"
                   >
-                    Book a Demo
+                    Register
                     <ArrowRight size={14} />
                   </a>
                 </div>
