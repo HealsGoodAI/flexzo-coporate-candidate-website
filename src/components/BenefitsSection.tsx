@@ -1,39 +1,39 @@
 import { motion } from "framer-motion";
 import platformDashboardMockup from "@/assets/platform-dashboard-mockup.png";
-import { TrendingDown, Zap, ShieldCheck, Users, BarChart3 } from "lucide-react";
+import { CalendarCheck, Zap, ShieldCheck, Wallet, Heart } from "lucide-react";
 import { useRegionText } from "@/lib/regionalize";
 import ScrollReveal from "./ScrollReveal";
 
 const benefits = [
   {
-    icon: TrendingDown,
-    title: "Lower Agency Spend",
+    icon: CalendarCheck,
+    title: "Flexible Scheduling",
     description:
-      "Lower agency spend through higher internal fill rates and smarter prioritisation of bank staff.",
+      "Pick shifts that fit your life — choose when, where, and how often you work with full control over your schedule.",
   },
   {
     icon: Zap,
-    title: "Faster Time-to-Hire",
+    title: "Instant Job Matching",
     description:
-      "Faster time-to-hire and shift fill via automated candidate flows and AI prioritised allocations.",
+      "Get matched to roles that suit your skills and preferences instantly through AI-powered recommendations.",
   },
   {
     icon: ShieldCheck,
-    title: "Improved Compliance",
+    title: "Hassle-Free Compliance",
     description:
-      "Improved compliance and roster accuracy using clinical rule enforcement and credential verification.",
+      "Your credentials, training, and documents are managed in one place — so you're always ready to work.",
   },
   {
-    icon: Users,
-    title: "Better Engagement",
+    icon: Wallet,
+    title: "Competitive Pay",
     description:
-      "Better workforce engagement and retention from mobile-first experiences, transparent allocation and targeted communications.",
+      "Access transparent pay rates with no hidden fees, plus fast payments so you're never left waiting.",
   },
   {
-    icon: BarChart3,
-    title: "Predictable Costs",
+    icon: Heart,
+    title: "Career Growth",
     description:
-      "Predictable workforce costs and operational resilience as forecasting and collaborative banks reduce variability and peak exposure.",
+      "Gain experience across top healthcare settings, build your professional profile, and advance your career on your terms.",
   },
 ];
 
@@ -45,7 +45,7 @@ const BenefitsSection = () => {
       <div className="mx-auto max-w-7xl px-6">
          <ScrollReveal animation="split" className="mb-16 max-w-2xl">
           <h2 className="font-display text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            {t("Why teams choose")} <span className="text-[#0075FF]">Flexzo</span>
+            {t("Why professionals choose")} <span className="text-[#0075FF]">Flexzo</span>
           </h2>
         </ScrollReveal>
 
