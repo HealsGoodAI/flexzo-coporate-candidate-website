@@ -195,7 +195,7 @@ export const articles: Article[] = [
     date: "June 20, 2025",
     publishedDate: "June 20, 2025",
     excerpt: "A comprehensive guide to NHS staff banks—how they operate, who can join, and why they're becoming the preferred alternative to agency work.",
-    image: articleNhsTrust,
+    image: articleNhsBank,
     sections: [
       {
         content: [
