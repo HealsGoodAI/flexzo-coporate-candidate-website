@@ -54,12 +54,14 @@ const SectorsOverview = () => {
   const { regionPath } = useRegion();
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const visibleCount = 4;
+
   const next = useCallback(() => {
-    setCurrentIndex((prev) => (prev + 2) % sectors.length);
+    setCurrentIndex((prev) => (prev + visibleCount) % sectors.length);
   }, []);
 
   const prev = useCallback(() => {
-    setCurrentIndex((prev) => (prev - 2 + sectors.length) % sectors.length);
+    setCurrentIndex((prev) => (prev - visibleCount + sectors.length) % sectors.length);
   }, []);
 
   useEffect(() => {
@@ -67,10 +69,9 @@ const SectorsOverview = () => {
     return () => clearInterval(interval);
   }, [next]);
 
-  const visibleSectors = [
-    sectors[currentIndex],
-    sectors[(currentIndex + 1) % sectors.length],
-  ];
+  const visibleSectors = Array.from({ length: visibleCount }, (_, i) =>
+    sectors[(currentIndex + i) % sectors.length]
+  );
 
   return (
     <section className="bg-foreground py-28">
@@ -102,7 +103,7 @@ const SectorsOverview = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {visibleSectors.map((sector, i) => (
             <motion.div
               key={`${sector.title}-${currentIndex}`}
@@ -115,7 +116,7 @@ const SectorsOverview = () => {
                 to={regionPath(sector.href)}
                 className="group relative flex flex-col overflow-hidden rounded-2xl"
               >
-                <div className="relative aspect-[3/4] w-full overflow-hidden">
+                <div className="relative aspect-[3/5] w-full overflow-hidden">
                   <img
                     src={sector.image}
                     alt={t(sector.title)}
@@ -141,12 +142,12 @@ const SectorsOverview = () => {
 
         {/* Dots */}
         <div className="mt-6 flex justify-center gap-2">
-          {Array.from({ length: Math.ceil(sectors.length / 2) }).map((_, i) => (
+          {Array.from({ length: Math.ceil(sectors.length / visibleCount) }).map((_, i) => (
             <button
               key={i}
-              onClick={() => setCurrentIndex(i * 2)}
+              onClick={() => setCurrentIndex(i * visibleCount)}
               className={`h-2 rounded-full transition-all duration-300 ${
-                currentIndex === i * 2
+                currentIndex === i * visibleCount
                   ? "w-6 bg-primary"
                   : "w-2 bg-background/30"
               }`}
