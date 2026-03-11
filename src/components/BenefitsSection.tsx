@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import platformDashboardMockup from "@/assets/platform-dashboard-mockup.png";
+import employeeAppMockup from "@/assets/employee-app-mockup.jpg";
 import { CalendarCheck, Zap, ShieldCheck, Wallet, Heart } from "lucide-react";
 import { useRegionText } from "@/lib/regionalize";
 import ScrollReveal from "./ScrollReveal";
