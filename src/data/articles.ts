@@ -415,7 +415,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Discover how healthcare professionals are increasingly working locum shifts without traditional agencies, and what platforms make it possible.",
-    image: articleCollaborative,
+    image: articleAgencyFree,
     sections: [
       {
         content: [
