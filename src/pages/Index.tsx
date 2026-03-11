@@ -23,10 +23,10 @@ const Index = () => {
       <Navbar transparent />
       <HeroSection />
       <PressBanner />
+      <FeaturedJobsSection />
       <BenefitsSection />
       <SectorsOverview />
       <FeaturesSection />
-      <FeaturedJobsSection />
       <TestimonialsSection />
       <Footer />
       
