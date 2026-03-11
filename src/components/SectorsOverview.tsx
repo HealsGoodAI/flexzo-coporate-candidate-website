@@ -18,7 +18,7 @@ const sectors = [
       "15 unique roles from physiotherapy to radiography — helping patients live their lives to the fullest.",
     image: careerAhp,
     href: "/careers/allied-health-professionals",
-    gradient: "from-teal-400 to-cyan-600",
+    gradient: "from-sky-400 to-blue-600",
   },
   {
     title: "Doctors",
