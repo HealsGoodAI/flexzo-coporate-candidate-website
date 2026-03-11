@@ -559,7 +559,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Examine why short-term solutions to NHS rota gaps—like agency staff and overtime—are failing, and what sustainable alternatives look like.",
-    image: articleNhsTrust,
+    image: articleRotaGaps,
     sections: [
       {
         content: [
