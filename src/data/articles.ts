@@ -667,7 +667,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "A practical roadmap for NHS Trusts looking to reduce their agency spend and build more sustainable, self-reliant workforce models.",
-    image: articleCollaborative,
+    image: articleFlexibleWork,
     sections: [
       {
         content: [
