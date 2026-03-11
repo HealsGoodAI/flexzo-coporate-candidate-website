@@ -6,34 +6,34 @@ import ScrollReveal from "./ScrollReveal";
 
 const benefits = [
   {
-    icon: TrendingDown,
-    title: "Lower Agency Spend",
+    icon: CalendarCheck,
+    title: "Flexible Scheduling",
     description:
-      "Lower agency spend through higher internal fill rates and smarter prioritisation of bank staff.",
+      "Pick shifts that fit your life — choose when, where, and how often you work with full control over your schedule.",
   },
   {
     icon: Zap,
-    title: "Faster Time-to-Hire",
+    title: "Instant Job Matching",
     description:
-      "Faster time-to-hire and shift fill via automated candidate flows and AI prioritised allocations.",
+      "Get matched to roles that suit your skills and preferences instantly through AI-powered recommendations.",
   },
   {
     icon: ShieldCheck,
-    title: "Improved Compliance",
+    title: "Hassle-Free Compliance",
     description:
-      "Improved compliance and roster accuracy using clinical rule enforcement and credential verification.",
+      "Your credentials, training, and documents are managed in one place — so you're always ready to work.",
   },
   {
-    icon: Users,
-    title: "Better Engagement",
+    icon: Wallet,
+    title: "Competitive Pay",
     description:
-      "Better workforce engagement and retention from mobile-first experiences, transparent allocation and targeted communications.",
+      "Access transparent pay rates with no hidden fees, plus fast payments so you're never left waiting.",
   },
   {
-    icon: BarChart3,
-    title: "Predictable Costs",
+    icon: Heart,
+    title: "Career Growth",
     description:
-      "Predictable workforce costs and operational resilience as forecasting and collaborative banks reduce variability and peak exposure.",
+      "Gain experience across top healthcare settings, build your professional profile, and advance your career on your terms.",
   },
 ];
 
