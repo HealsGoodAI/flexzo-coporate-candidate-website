@@ -361,7 +361,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Practical tips for finding higher-paying NHS locum shifts, including the best times, locations, and specialties for maximising your earnings.",
-    image: articleNhsShifts,
+    image: articleEarnings,
     sections: [
       {
         content: [
