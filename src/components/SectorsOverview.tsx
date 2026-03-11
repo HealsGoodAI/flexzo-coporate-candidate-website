@@ -142,7 +142,7 @@ const SectorsOverview = () => {
 
         {/* Dots */}
         <div className="mt-6 flex justify-center gap-2">
-          {Array.from({ length: Math.ceil(sectors.length / 2) }).map((_, i) => (
+          {Array.from({ length: Math.ceil(sectors.length / visibleCount) }).map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrentIndex(i * 2)}
