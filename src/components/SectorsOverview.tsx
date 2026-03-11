@@ -119,17 +119,16 @@ const SectorsOverview = () => {
             >
               <Link
                 to={regionPath(sector.href)}
-                className="group relative flex flex-col overflow-hidden rounded-2xl"
+                className={`group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br ${sector.gradient}`}
               >
-                <div className="relative aspect-[3/5] w-full overflow-hidden">
+                <div className="relative aspect-[3/5] w-full overflow-hidden flex items-end justify-center">
                   <img
                     src={sector.image}
                     alt={t(sector.title)}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="h-[85%] w-auto object-contain drop-shadow-2xl transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                 </div>
-                <div className="absolute inset-x-0 bottom-0 p-6">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-6 pt-16">
                   <h3 className="mb-2 font-display text-2xl font-bold text-white md:text-3xl">
                     {t(sector.title)}
                   </h3>
