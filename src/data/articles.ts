@@ -757,7 +757,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Practical strategies for NHS Trusts to reduce agency dependence and redirect savings toward improved patient care and staff development.",
-    image: articleRegistration,
+    image: articleSavings,
     sections: [
       {
         content: [
