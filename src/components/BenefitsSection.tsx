@@ -80,12 +80,12 @@ const BenefitsSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mt-20 w-full"
+        className="mx-auto mt-20 max-w-3xl px-6"
       >
         <img
-          src={platformDashboardMockup}
-          alt="Flexzo platform dashboard overview"
-          className="w-full object-cover"
+          src={employeeAppMockup}
+          alt="Flexzo employee mobile app"
+          className="w-full rounded-2xl object-cover"
         />
       </motion.div>
     </section>
