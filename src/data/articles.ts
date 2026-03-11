@@ -379,7 +379,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "A comprehensive overview of current NHS pay rates for bank and locum staff, including band-by-band breakdowns and enhancement rates.",
-    image: articleCompliance,
+    image: articleComplianceDocs,
     sections: [
       {
         content: [
