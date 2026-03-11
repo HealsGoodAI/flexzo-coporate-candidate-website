@@ -739,7 +739,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Identify the key factors behind the NHS's escalating agency costs, from workforce shortages to structural inefficiencies in the staffing market.",
-    image: articleNhsTrust,
+    image: articleNhsExterior,
     sections: [
       {
         content: [
