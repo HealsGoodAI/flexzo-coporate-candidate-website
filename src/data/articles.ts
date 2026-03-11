@@ -487,7 +487,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Tips and strategies for speeding up your payments for locum and bank shifts, including the fastest payment platforms and common pitfalls to avoid.",
-    image: articleRegistration,
+    image: articleCompliance,
     sections: [
       {
         content: [
