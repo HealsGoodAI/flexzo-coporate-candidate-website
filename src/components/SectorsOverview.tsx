@@ -117,8 +117,7 @@ const SectorsOverview = () => {
               exit={{ opacity: 0, x: -60 }}
               transition={{ delay: i * 0.15, duration: 0.5, ease: "easeOut" }}
             >
-              <Link
-                to={regionPath(sector.href)}
+              <div
                 className={`group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br ${sector.gradient}`}
               >
                 <div className="relative aspect-[3/5] w-full overflow-hidden flex items-end justify-center">
@@ -135,11 +134,14 @@ const SectorsOverview = () => {
                   <p className="mb-3 text-sm leading-relaxed text-white/70 line-clamp-2">
                     {t(sector.description)}
                   </p>
-                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-white/90 transition-colors group-hover:text-white">
-                    {t("Explore sector")} <ArrowRight size={12} className="transition-transform group-hover:translate-x-1" />
-                  </span>
+                  <Link
+                    to={regionPath(sector.href)}
+                    className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-xs font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/30 hover:gap-3"
+                  >
+                    {t("Explore sector")} <ArrowRight size={12} />
+                  </Link>
                 </div>
-              </Link>
+              </div>
             </motion.div>
           ))}
         </div>
