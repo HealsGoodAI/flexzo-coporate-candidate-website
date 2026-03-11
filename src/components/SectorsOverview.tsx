@@ -3,11 +3,11 @@ import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState, useCallback } from "react";
 import { useRegion } from "@/hooks/useRegion";
-import careerAhp from "@/assets/career-ahp.jpg";
-import careerDoctors from "@/assets/career-doctors.jpg";
-import careerNursing from "@/assets/career-nursing.jpg";
-import careerPharmacy from "@/assets/career-pharmacy.jpg";
-import careerMidwifery from "@/assets/career-midwifery.jpg";
+import careerAhp from "@/assets/career-ahp.png";
+import careerDoctors from "@/assets/career-doctors.png";
+import careerNursing from "@/assets/career-nursing.png";
+import careerPharmacy from "@/assets/career-pharmacy.png";
+import careerMidwifery from "@/assets/career-midwifery.png";
 import { useRegionText } from "@/lib/regionalize";
 import ScrollReveal from "./ScrollReveal";
 
