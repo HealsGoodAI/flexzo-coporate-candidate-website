@@ -541,7 +541,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Discover how persistent staffing gaps are forcing NHS Trusts to rethink their workforce strategies, from reactive agency use to proactive collaborative models.",
-    image: articleWorkforceTech,
+    image: articleWorkforcePlanning,
     sections: [
       {
         content: [
