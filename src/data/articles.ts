@@ -685,7 +685,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Beyond the obvious cost, discover five hidden risks that come with relying on agency staff for NHS shift cover—and how to mitigate them.",
-    image: articleWorkforceTech,
+    image: articleNhsShifts,
     sections: [
       {
         content: [
