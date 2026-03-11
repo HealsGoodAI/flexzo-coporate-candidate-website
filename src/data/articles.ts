@@ -703,7 +703,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Examine the growing financial pressure of agency spend on NHS Trusts and the cascading effects on budgets, services, and patient care.",
-    image: articleAgencyCosts,
+    image: articleRisingCosts,
     sections: [
       {
         content: [
