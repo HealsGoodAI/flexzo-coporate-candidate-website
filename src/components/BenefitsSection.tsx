@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import platformDashboardMockup from "@/assets/platform-dashboard-mockup.png";
-import { TrendingDown, Zap, ShieldCheck, Users, BarChart3 } from "lucide-react";
+import { CalendarCheck, Zap, ShieldCheck, Wallet, Heart } from "lucide-react";
 import { useRegionText } from "@/lib/regionalize";
 import ScrollReveal from "./ScrollReveal";
 
