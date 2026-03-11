@@ -147,7 +147,7 @@ const SectorsOverview = () => {
               key={i}
               onClick={() => setCurrentIndex(i * visibleCount)}
               className={`h-2 rounded-full transition-all duration-300 ${
-                currentIndex === i * 2
+                currentIndex === i * visibleCount
                   ? "w-6 bg-primary"
                   : "w-2 bg-background/30"
               }`}
