@@ -469,7 +469,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Understand payment timelines for NHS locum shifts, what causes delays, and how to ensure you get paid as quickly as possible.",
-    image: articleCompliance,
+    image: articleWorkforceTech,
     sections: [
       {
         content: [
