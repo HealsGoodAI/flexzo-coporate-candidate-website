@@ -5,34 +5,34 @@ import ScrollReveal from "./ScrollReveal";
 
 const features = [
   {
-    icon: Zap,
-    title: "Instant Access to Clinicians",
-    desc: "Access a nationwide clinical bank of pre-vetted, compliance-ready clinicians available for temporary or permanent roles.",
+    icon: Smartphone,
+    title: "Find Shifts Instantly",
+    desc: "Browse and book shifts near you in seconds — filter by role, location, and pay rate, all from your phone.",
   },
   {
     icon: Brain,
-    title: "AI-Powered Shift Matching",
-    desc: "Smart matching uses real-time availability and location data to notify clinicians who can realistically cover the shift.",
+    title: "AI-Matched Opportunities",
+    desc: "Our AI learns your preferences, skills, and availability to recommend shifts that are the perfect fit for you.",
   },
   {
-    icon: Shield,
-    title: "Effortless Compliance",
-    desc: "Automated background checks, registration validation, work authorisation, and ongoing compliance tracking.",
+    icon: FileCheck,
+    title: "Stress-Free Compliance",
+    desc: "Upload your documents once and we handle the rest — automated reminders, verification, and renewal tracking.",
   },
   {
-    icon: Clock,
-    title: "Seamless Workforce Planning",
-    desc: "From last-minute cover to longer-term gaps, match the right clinician to the right shift in real time.",
+    icon: MapPin,
+    title: "Work Where You Want",
+    desc: "Access shifts across NHS trusts, private healthcare, and community settings — locally or across the country.",
   },
   {
-    icon: Users,
-    title: "Zero Fees. Full Transparency.",
-    desc: "No agency margins. No permanent placement fees. No hidden costs. Practices pay clinician rates only.",
+    icon: Wallet,
+    title: "Fair Pay, Fast Payments",
+    desc: "See exactly what you'll earn upfront with transparent rates. No hidden deductions, no waiting weeks to get paid.",
   },
   {
-    icon: Globe,
-    title: "Global Healthcare Talent",
-    desc: "Connect hospitals and healthcare settings to a worldwide network of verified healthcare professionals.",
+    icon: Rocket,
+    title: "Build Your Career",
+    desc: "Gain diverse clinical experience, grow your professional profile, and take your career in the direction you choose.",
   },
 ];
 
