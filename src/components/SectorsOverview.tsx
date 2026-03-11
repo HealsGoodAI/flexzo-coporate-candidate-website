@@ -116,7 +116,7 @@ const SectorsOverview = () => {
                 to={regionPath(sector.href)}
                 className="group relative flex flex-col overflow-hidden rounded-2xl"
               >
-                <div className="relative aspect-[3/4] w-full overflow-hidden">
+                <div className="relative aspect-[3/5] w-full overflow-hidden">
                   <img
                     src={sector.image}
                     alt={t(sector.title)}
