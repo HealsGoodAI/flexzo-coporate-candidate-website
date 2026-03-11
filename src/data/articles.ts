@@ -397,7 +397,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Learn how to access NHS shifts directly through staff banks and collaborative platforms, cutting out agency fees and keeping more of your pay.",
-    image: articleWorkforceTech,
+    image: articleDirectBooking,
     sections: [
       {
         content: [
