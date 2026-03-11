@@ -299,7 +299,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Compare the different ways to find NHS shifts—agencies, staff banks, and AI-powered platforms—and discover which method gives you the most control.",
-    image: articleNhsShifts,
+    image: articleFindShifts,
     sections: [
       {
         content: [
