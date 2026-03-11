@@ -325,7 +325,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Discover where the highest-paying NHS bank shifts are, which specialties command premium rates, and how to position yourself for the best opportunities.",
-    image: articleFlexibleWork,
+    image: articleBankRegistration,
     sections: [
       {
         content: [
