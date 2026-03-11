@@ -2,41 +2,132 @@ import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
+import t1 from "@/assets/testimonial-1.png";
+import t2 from "@/assets/testimonial-2.png";
+import t3 from "@/assets/testimonial-3.png";
+import t4 from "@/assets/testimonial-4.png";
+import t5 from "@/assets/testimonial-5.png";
+import t6 from "@/assets/testimonial-6.png";
+import t7 from "@/assets/testimonial-7.png";
+import t8 from "@/assets/testimonial-8.png";
+import t9 from "@/assets/testimonial-9.png";
+import t10 from "@/assets/testimonial-10.png";
+import t11 from "@/assets/testimonial-11.png";
+import t12 from "@/assets/testimonial-12.png";
+import t13 from "@/assets/testimonial-13.png";
+import t14 from "@/assets/testimonial-14.png";
+import t15 from "@/assets/testimonial-15.png";
+
 const testimonials = [
   {
-    quote: "The team found me a locum quickly and they have worked a number of sessions for me. The team are professional and forward thinking, and I am really happy with the service.",
-    name: "Julian Saul",
-    role: "Practice Business Manager, Wrekenton GP Practice",
+    quote: "Flexzo gave me the freedom to pick shifts that work around my family. I've never felt more in control of my career.",
+    name: "Amara Johnson",
+    role: "Registered Nurse",
+    image: t1,
   },
   {
-    quote: "We have been exceptionally impressed with Flexzo as a locum platform. It is a refined, intelligent, and forward-looking service that adds genuine value beyond simple rota fulfilment.",
-    name: "Karla Pooja",
-    role: "Managing Director, St Martins Medical Centre",
+    quote: "As a locum GP, the onboarding was seamless. I was matched to shifts within days — no agency hassle, just straightforward work.",
+    name: "Dr Richard Hayes",
+    role: "General Practitioner",
+    image: t2,
   },
   {
-    quote: "The onboarding process was straight forward and made very easy and comfortable with the team. Would certainly recommend for anyone wanting to work in a locum setting without agency involvement.",
-    name: "Dr Kamran Shafiq",
-    role: "GP, Doctors.org",
+    quote: "The compliance management is brilliant. All my documents are in one place and I get reminded before anything expires.",
+    name: "Priya Sharma",
+    role: "Pharmacist",
+    image: t3,
   },
   {
-    quote: "Flexzo continues to manage the service externally on behalf of the trust, providing a seamless process for managing vacancies while ensuring that workers are engaged directly through the Trust Bank. This model has delivered both efficiency and consistency, aligning fully with CNWL's strategic workforce objectives.",
-    name: "Shreene Swann",
-    role: "Assistant Director of People, Central & North West London NHS Trust",
+    quote: "I love being able to browse available shifts on my phone and book instantly. It's transformed how I manage my week.",
+    name: "Tom Bradley",
+    role: "Physiotherapist",
+    image: t4,
+  },
+  {
+    quote: "Flexzo pays fairly and on time, every time. After years of agency work, it's refreshing to feel valued and respected.",
+    name: "Marcus Williams",
+    role: "Healthcare Assistant",
+    image: t5,
+  },
+  {
+    quote: "I joined as a newly qualified midwife and Flexzo helped me gain experience across multiple trusts. Incredible for career development.",
+    name: "Sophie Turner",
+    role: "Midwife",
+    image: t6,
+  },
+  {
+    quote: "The app is so intuitive. I set my availability, get matched, and show up. It's that simple. Wish I'd found this sooner.",
+    name: "Daniel Chen",
+    role: "Staff Nurse",
+    image: t7,
+  },
+  {
+    quote: "Working through Flexzo has given me exposure to different clinical settings while maintaining the flexibility I need for my studies.",
+    name: "Dr Anita Patel",
+    role: "Junior Doctor",
+    image: t8,
+  },
+  {
+    quote: "The team genuinely cares about their workers. Any issue I've had was resolved within hours. Outstanding support.",
+    name: "Emma Richardson",
+    role: "Occupational Therapist",
+    image: t9,
+  },
+  {
+    quote: "Flexzo connected me with shifts I never would have found through traditional agencies. The AI matching is spot on.",
+    name: "David Okafor",
+    role: "Paramedic",
+    image: t10,
+  },
+  {
+    quote: "After 20 years in nursing, Flexzo helped me transition to flexible bank work without losing income. Best decision I've made.",
+    name: "Linda Crawford",
+    role: "Senior Nurse",
+    image: t11,
+  },
+  {
+    quote: "The transparent pay rates mean no surprises. I know exactly what I'll earn before I accept a shift.",
+    name: "Ahmed Hassan",
+    role: "Pharmacist",
+    image: t12,
+  },
+  {
+    quote: "As a healthcare assistant, finding consistent work used to be stressful. Flexzo keeps my calendar full with shifts I actually want.",
+    name: "Jade Martinez",
+    role: "Healthcare Assistant",
+    image: t13,
+  },
+  {
+    quote: "The platform made it easy to work across multiple NHS trusts. My credentials transfer seamlessly — no repeated paperwork.",
+    name: "James Cooper",
+    role: "Radiographer",
+    image: t14,
+  },
+  {
+    quote: "Flexzo treats you like a professional, not a number. The personalised shift recommendations show they understand what I'm looking for.",
+    name: "Yuki Tanaka",
+    role: "Speech Therapist",
+    image: t15,
   },
 ];
 
-const ChatIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M4 18C3.45 18 2.97917 17.8042 2.5875 17.4125C2.19583 17.0208 2 16.55 2 16V4C2 3.45 2.19583 2.97917 2.5875 2.5875C2.97917 2.19583 3.45 2 4 2H20C20.55 2 21.0208 2.19583 21.4125 2.5875C21.8042 2.97917 22 3.45 22 4V16C22 16.55 21.8042 17.0208 21.4125 17.4125C21.0208 17.8042 20.55 18 20 18H14.675L12.825 20.75C12.725 20.9 12.6042 21.0125 12.4625 21.0875C12.3208 21.1625 12.1667 21.2 12 21.2C11.8333 21.2 11.6792 21.1625 11.5375 21.0875C11.3958 21.0125 11.275 20.9 11.175 20.75L9.325 18H4ZM12 18.4L13.6 16H20V4H4V16H10.4L12 18.4Z"
-      fill="hsl(var(--muted-foreground))"
-    />
-  </svg>
-);
-
-const TestimonialCard = ({ quote, name, role }: { quote: string; name: string; role: string }) => (
+const TestimonialCard = ({
+  quote,
+  name,
+  role,
+  image,
+}: {
+  quote: string;
+  name: string;
+  role: string;
+  image: string;
+}) => (
   <div className="flex h-full flex-col gap-4 rounded-xl border border-border bg-background p-6">
-    <ChatIcon />
+    <img
+      src={image}
+      alt={name}
+      className="h-12 w-12 rounded-full object-cover"
+    />
     <p className="text-lg leading-relaxed text-foreground">"{quote}"</p>
     <div className="mt-auto">
       <p className="text-sm font-semibold text-[#0075FF]">{name}</p>
@@ -46,7 +137,6 @@ const TestimonialCard = ({ quote, name, role }: { quote: string; name: string; r
 );
 
 const TestimonialsSection = () => {
-  // Each "page" shows 2 cards; total pages = ceil(testimonials.length / 2)
   const totalPages = Math.ceil(testimonials.length / 2);
   const [page, setPage] = useState(0);
 
@@ -65,18 +155,17 @@ const TestimonialsSection = () => {
       <div className="mx-auto max-w-7xl px-6 mb-12">
         <ScrollReveal animation="split">
           <h2 className="font-display text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            What our partners say
+            What our professionals say
           </h2>
         </ScrollReveal>
         <ScrollReveal animation="fade-up" delay={0.15}>
           <p className="mt-3 max-w-xl text-base text-muted-foreground">
-            Trusted by NHS Trusts and healthcare organisations across the UK.
+            Trusted by healthcare workers across the UK.
           </p>
         </ScrollReveal>
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6">
-        {/* Arrows */}
         <button
           onClick={prev}
           className="absolute -left-1 top-1/2 z-20 -translate-y-1/2 rounded-full border border-border bg-background p-2 shadow-sm transition-colors hover:bg-muted md:left-0"
@@ -92,14 +181,12 @@ const TestimonialsSection = () => {
           <ChevronRight size={20} className="text-foreground" />
         </button>
 
-        {/* Cards */}
         <div className="grid gap-5 px-8 md:grid-cols-2 transition-opacity duration-500" key={page}>
           {pair.map((t) => (
             <TestimonialCard key={t.name} {...t} />
           ))}
         </div>
 
-        {/* Dots */}
         <div className="mt-6 flex justify-center gap-2">
           {Array.from({ length: totalPages }).map((_, i) => (
             <button
