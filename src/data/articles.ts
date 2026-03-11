@@ -169,7 +169,7 @@ export const articles: Article[] = [
     date: "June 20, 2025",
     publishedDate: "June 20, 2025",
     excerpt: "Compare NHS bank shifts and locum agency work side by side—covering pay, flexibility, compliance, and which option might be best for your career.",
-    image: articleWorkforceTech,
+    image: articleShiftSchedule,
     sections: [
       {
         content: [
