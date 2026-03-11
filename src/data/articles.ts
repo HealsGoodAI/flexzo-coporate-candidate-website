@@ -247,7 +247,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "A breakdown of NHS bank shift pay rates by band, including unsocial hours enhancements and how collaborative platforms can help you earn more.",
-    image: articlePayEarnings,
+    image: articlePayRates,
     sections: [
       {
         content: [
