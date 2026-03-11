@@ -775,7 +775,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "A deep dive into how agency dependence is eroding NHS Trust budgets, creating a vicious cycle of overspending and underinvestment.",
-    image: articleAgencyCosts,
+    image: articlePayEarnings,
     sections: [
       {
         content: [
