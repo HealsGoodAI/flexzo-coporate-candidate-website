@@ -43,14 +43,14 @@ const FeaturesSection = () => {
     <section id="features" className="relative py-32">
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <ScrollReveal animation="fade-left" className="mb-16">
-          <span className="mb-4 inline-block text-xs font-medium uppercase tracking-widest text-muted-foreground">
-            {t("Workforce Management, Simplified")}
-          </span>
-          <h2 className="font-display text-4xl font-bold text-foreground md:text-5xl">
-            {t("Flexzo AI puts your team")}
-            <br />
-            <span className="text-[#0075FF]">{t("in control")}</span>
-          </h2>
+           <span className="mb-4 inline-block text-xs font-medium uppercase tracking-widest text-muted-foreground">
+             {t("Your Career, Your Way")}
+           </span>
+           <h2 className="font-display text-4xl font-bold text-foreground md:text-5xl">
+             {t("Flexzo AI puts you")}
+             <br />
+             <span className="text-[#0075FF]">{t("in control")}</span>
+           </h2>
         </ScrollReveal>
 
         <div className="grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3 rounded-2xl overflow-hidden border border-border">
