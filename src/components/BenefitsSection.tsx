@@ -45,7 +45,7 @@ const BenefitsSection = () => {
       <div className="mx-auto max-w-7xl px-6">
          <ScrollReveal animation="split" className="mb-16 max-w-2xl">
           <h2 className="font-display text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            {t("Why teams choose")} <span className="text-[#0075FF]">Flexzo</span>
+            {t("Why professionals choose")} <span className="text-[#0075FF]">Flexzo</span>
           </h2>
         </ScrollReveal>
 
