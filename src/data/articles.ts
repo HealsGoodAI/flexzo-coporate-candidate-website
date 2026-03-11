@@ -451,7 +451,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Explore the key advantages of booking NHS shifts directly—from higher take-home pay to greater flexibility and simplified compliance.",
-    image: articleFlexibleWork,
+    image: articleCollaborative,
     sections: [
       {
         content: [
