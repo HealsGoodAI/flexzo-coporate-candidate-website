@@ -145,7 +145,7 @@ const SectorsOverview = () => {
           {Array.from({ length: Math.ceil(sectors.length / visibleCount) }).map((_, i) => (
             <button
               key={i}
-              onClick={() => setCurrentIndex(i * 2)}
+              onClick={() => setCurrentIndex(i * visibleCount)}
               className={`h-2 rounded-full transition-all duration-300 ${
                 currentIndex === i * 2
                   ? "w-6 bg-primary"
