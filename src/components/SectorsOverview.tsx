@@ -42,7 +42,7 @@ const sectors = [
       "Expert knowledge of medicines combined with growing clinical responsibility at the heart of communities.",
     image: careerPharmacy,
     href: "/careers/pharmacy",
-    gradient: "from-violet-500 to-purple-700",
+    gradient: "from-blue-400 to-indigo-600",
   },
   {
     title: "Midwifery",
