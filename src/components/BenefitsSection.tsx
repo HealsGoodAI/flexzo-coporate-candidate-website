@@ -85,7 +85,7 @@ const BenefitsSection = () => {
         <img
           src={employeeAppMockup}
           alt="Flexzo employee mobile app"
-          className="w-full rounded-2xl object-cover"
+          className="w-full object-cover"
         />
       </motion.div>
     </section>
