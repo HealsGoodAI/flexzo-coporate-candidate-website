@@ -523,7 +523,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Explore the link between NHS staffing shortages and the growing elective backlog, and discover how collaborative staffing models can help Trusts recover.",
-    image: articleStaffingShortage,
+    image: articleElective,
     sections: [
       {
         content: [
