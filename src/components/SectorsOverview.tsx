@@ -34,7 +34,7 @@ const sectors = [
       "One of the most dynamic and rewarding roles in the NHS — work across hospitals, communities, and beyond.",
     image: careerNursing,
     href: "/careers/nursing",
-    gradient: "from-emerald-400 to-teal-600",
+    gradient: "from-cyan-500 to-blue-700",
   },
   {
     title: "Pharmacy",
