@@ -54,12 +54,14 @@ const SectorsOverview = () => {
   const { regionPath } = useRegion();
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const visibleCount = 4;
+
   const next = useCallback(() => {
-    setCurrentIndex((prev) => (prev + 2) % sectors.length);
+    setCurrentIndex((prev) => (prev + visibleCount) % sectors.length);
   }, []);
 
   const prev = useCallback(() => {
-    setCurrentIndex((prev) => (prev - 2 + sectors.length) % sectors.length);
+    setCurrentIndex((prev) => (prev - visibleCount + sectors.length) % sectors.length);
   }, []);
 
   useEffect(() => {
@@ -67,10 +69,9 @@ const SectorsOverview = () => {
     return () => clearInterval(interval);
   }, [next]);
 
-  const visibleSectors = [
-    sectors[currentIndex],
-    sectors[(currentIndex + 1) % sectors.length],
-  ];
+  const visibleSectors = Array.from({ length: visibleCount }, (_, i) =>
+    sectors[(currentIndex + i) % sectors.length]
+  );
 
   return (
     <section className="bg-foreground py-28">
