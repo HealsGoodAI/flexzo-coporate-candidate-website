@@ -505,7 +505,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Practical advice for healthcare professionals on how to reduce payment delays for NHS shifts, from timesheet tips to platform selection.",
-    image: articleNhsShifts,
+    image: articleRegistration,
     sections: [
       {
         content: [
