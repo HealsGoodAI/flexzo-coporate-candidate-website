@@ -277,7 +277,11 @@ const Navbar = ({ transparent = false }: NavbarProps) => {
                       <button
                         key={r}
                         onClick={() => {
-                          switchRegion(r);
+                          if (r === "us") {
+                            window.open("https://flexzo.us/", "_blank", "noopener,noreferrer");
+                          } else {
+                            switchRegion(r);
+                          }
                           setRegionDropdownOpen(false);
                           setMobileOpen(false);
                         }}

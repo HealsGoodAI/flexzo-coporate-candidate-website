@@ -101,7 +101,11 @@ const Footer = () => {
                     <button
                       key={r}
                       onClick={() => {
-                        switchRegion(r);
+                        if (r === "us") {
+                          window.open("https://flexzo.us/", "_blank", "noopener,noreferrer");
+                        } else {
+                          switchRegion(r);
+                        }
                         setDropdownOpen(false);
                       }}
                       className={`flex w-full items-center gap-2.5 px-4 py-2.5 text-left text-sm transition-colors ${
