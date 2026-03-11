@@ -9,6 +9,26 @@ import articleWorkforceTech from "@/assets/article-workforce-tech.jpg";
 import articleStaffingShortage from "@/assets/article-staffing-shortage.jpg";
 import articleNhsTrust from "@/assets/article-nhs-trust.jpg";
 import articleRegistration from "@/assets/article-registration.jpg";
+import articleShiftSchedule from "@/assets/article-shift-schedule.jpg";
+import articleBankRegistration from "@/assets/article-bank-registration.jpg";
+import articleBankLocum from "@/assets/article-bank-locum.jpg";
+import articleNhsBank from "@/assets/article-nhs-bank.jpg";
+import articlePayRates from "@/assets/article-pay-rates.jpg";
+import articleFindShifts from "@/assets/article-find-shifts.jpg";
+import articleLocumRoles from "@/assets/article-locum-roles.jpg";
+import articleNhsExterior from "@/assets/article-nhs-exterior.jpg";
+import articleWorkforcePlanning from "@/assets/article-workforce-planning.jpg";
+import articleDirectBooking from "@/assets/article-direct-booking.jpg";
+import articleAgencyFree from "@/assets/article-agency-free.jpg";
+import articleEarnings from "@/assets/article-earnings.jpg";
+import articleComplianceDocs from "@/assets/article-compliance-docs.jpg";
+import articleElective from "@/assets/article-elective.jpg";
+import articleRotaGaps from "@/assets/article-rota-gaps.jpg";
+import articlePatientCare from "@/assets/article-patient-care.jpg";
+import articleRisingCosts from "@/assets/article-rising-costs.jpg";
+import articleBudgetCaps from "@/assets/article-budget-caps.jpg";
+import articleNewApproach from "@/assets/article-new-approach.jpg";
+import articleSavings from "@/assets/article-savings.jpg";
 
 export interface ArticleSection {
   heading?: string;
