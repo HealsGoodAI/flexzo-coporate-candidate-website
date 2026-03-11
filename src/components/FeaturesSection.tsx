@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Zap, Shield, Users, Brain, Clock, Globe } from "lucide-react";
+import { Smartphone, Brain, FileCheck, MapPin, Wallet, Rocket } from "lucide-react";
 import { useRegionText } from "@/lib/regionalize";
 import ScrollReveal from "./ScrollReveal";
 
