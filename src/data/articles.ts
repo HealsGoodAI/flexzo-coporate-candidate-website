@@ -595,7 +595,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Explore the direct impact of staffing shortages on patient outcomes, safety incidents, and care quality across NHS Trusts.",
-    image: articleCollaborative,
+    image: articlePatientCare,
     sections: [
       {
         content: [
