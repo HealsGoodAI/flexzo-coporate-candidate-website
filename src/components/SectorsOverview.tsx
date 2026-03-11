@@ -3,11 +3,11 @@ import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState, useCallback } from "react";
 import { useRegion } from "@/hooks/useRegion";
-import careerAhp from "@/assets/career-ahp.jpg";
-import careerDoctors from "@/assets/career-doctors.jpg";
-import careerNursing from "@/assets/career-nursing.jpg";
-import careerPharmacy from "@/assets/career-pharmacy.jpg";
-import careerMidwifery from "@/assets/career-midwifery.jpg";
+import careerAhp from "@/assets/career-ahp.png";
+import careerDoctors from "@/assets/career-doctors.png";
+import careerNursing from "@/assets/career-nursing.png";
+import careerPharmacy from "@/assets/career-pharmacy.png";
+import careerMidwifery from "@/assets/career-midwifery.png";
 import { useRegionText } from "@/lib/regionalize";
 import ScrollReveal from "./ScrollReveal";
 
@@ -18,6 +18,7 @@ const sectors = [
       "15 unique roles from physiotherapy to radiography — helping patients live their lives to the fullest.",
     image: careerAhp,
     href: "/careers/allied-health-professionals",
+    gradient: "from-teal-400 to-cyan-600",
   },
   {
     title: "Doctors",
@@ -25,6 +26,7 @@ const sectors = [
       "Over 50 specialties to choose from with world-class training and the chance to change lives every day.",
     image: careerDoctors,
     href: "/careers/doctors",
+    gradient: "from-blue-500 to-indigo-700",
   },
   {
     title: "Nursing",
@@ -32,6 +34,7 @@ const sectors = [
       "One of the most dynamic and rewarding roles in the NHS — work across hospitals, communities, and beyond.",
     image: careerNursing,
     href: "/careers/nursing",
+    gradient: "from-emerald-400 to-teal-600",
   },
   {
     title: "Pharmacy",
@@ -39,6 +42,7 @@ const sectors = [
       "Expert knowledge of medicines combined with growing clinical responsibility at the heart of communities.",
     image: careerPharmacy,
     href: "/careers/pharmacy",
+    gradient: "from-violet-500 to-purple-700",
   },
   {
     title: "Midwifery",
@@ -46,6 +50,7 @@ const sectors = [
       "Be at the very start of a family's journey — supporting women through pregnancy, birth, and beyond.",
     image: careerMidwifery,
     href: "/careers/midwifery",
+    gradient: "from-rose-400 to-pink-600",
   },
 ];
 
@@ -114,17 +119,16 @@ const SectorsOverview = () => {
             >
               <Link
                 to={regionPath(sector.href)}
-                className="group relative flex flex-col overflow-hidden rounded-2xl"
+                className={`group relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br ${sector.gradient}`}
               >
-                <div className="relative aspect-[3/5] w-full overflow-hidden">
+                <div className="relative aspect-[3/5] w-full overflow-hidden flex items-end justify-center">
                   <img
                     src={sector.image}
                     alt={t(sector.title)}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="h-[85%] w-auto object-contain drop-shadow-2xl transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                 </div>
-                <div className="absolute inset-x-0 bottom-0 p-6">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-6 pt-16">
                   <h3 className="mb-2 font-display text-2xl font-bold text-white md:text-3xl">
                     {t(sector.title)}
                   </h3>
