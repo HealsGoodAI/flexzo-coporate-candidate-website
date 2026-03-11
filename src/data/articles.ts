@@ -613,7 +613,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "A call to action for Trust leaders: why the status quo in NHS staffing is unsustainable and what a modern approach looks like.",
-    image: articleAgencyCosts,
+    image: articleNewApproach,
     sections: [
       {
         content: [
