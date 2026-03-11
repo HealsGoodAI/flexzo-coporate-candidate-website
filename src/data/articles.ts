@@ -143,7 +143,7 @@ export const articles: Article[] = [
     date: "October 15, 2025",
     publishedDate: "October 15, 2025",
     excerpt: "Understand the rules and practicalities of combining NHS bank and locum work, including tax implications and how to manage your schedule effectively.",
-    image: articleCollaborative,
+    image: articleBankLocum,
     sections: [
       {
         content: [
