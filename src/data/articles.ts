@@ -721,7 +721,7 @@ export const articles: Article[] = [
     date: "April 17, 2025",
     publishedDate: "April 17, 2025",
     excerpt: "Analyse why imposing budget caps on agency spending hasn't solved the problem and what structural changes are needed instead.",
-    image: articleWorkforceTech,
+    image: articleBudgetCaps,
     sections: [
       {
         content: [
