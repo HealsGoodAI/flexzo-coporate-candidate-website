@@ -343,7 +343,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "Explore the top-paying locum healthcare roles in the UK, from specialist nursing to consultant-level positions, and how to access them.",
-    image: articlePayEarnings,
+    image: articleLocumRoles,
     sections: [
       {
         content: [
