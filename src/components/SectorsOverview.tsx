@@ -50,7 +50,7 @@ const sectors = [
       "Be at the very start of a family's journey — supporting women through pregnancy, birth, and beyond.",
     image: careerMidwifery,
     href: "/careers/midwifery",
-    gradient: "from-rose-400 to-pink-600",
+    gradient: "from-slate-400 to-blue-500",
   },
 ];
 
