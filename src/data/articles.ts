@@ -433,7 +433,7 @@ export const articles: Article[] = [
     date: "May 7, 2025",
     publishedDate: "May 7, 2025",
     excerpt: "A practical guide to working locum shifts directly with NHS Trusts, eliminating agency middlemen and maximising your take-home pay.",
-    image: articlePayEarnings,
+    image: articleNhsExterior,
     sections: [
       {
         content: [
