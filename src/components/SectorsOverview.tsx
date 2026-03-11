@@ -18,6 +18,7 @@ const sectors = [
       "15 unique roles from physiotherapy to radiography — helping patients live their lives to the fullest.",
     image: careerAhp,
     href: "/careers/allied-health-professionals",
+    gradient: "from-teal-400 to-cyan-600",
   },
   {
     title: "Doctors",
@@ -25,6 +26,7 @@ const sectors = [
       "Over 50 specialties to choose from with world-class training and the chance to change lives every day.",
     image: careerDoctors,
     href: "/careers/doctors",
+    gradient: "from-blue-500 to-indigo-700",
   },
   {
     title: "Nursing",
@@ -32,6 +34,7 @@ const sectors = [
       "One of the most dynamic and rewarding roles in the NHS — work across hospitals, communities, and beyond.",
     image: careerNursing,
     href: "/careers/nursing",
+    gradient: "from-emerald-400 to-teal-600",
   },
   {
     title: "Pharmacy",
@@ -39,6 +42,7 @@ const sectors = [
       "Expert knowledge of medicines combined with growing clinical responsibility at the heart of communities.",
     image: careerPharmacy,
     href: "/careers/pharmacy",
+    gradient: "from-violet-500 to-purple-700",
   },
   {
     title: "Midwifery",
@@ -46,6 +50,7 @@ const sectors = [
       "Be at the very start of a family's journey — supporting women through pregnancy, birth, and beyond.",
     image: careerMidwifery,
     href: "/careers/midwifery",
+    gradient: "from-rose-400 to-pink-600",
   },
 ];
 
