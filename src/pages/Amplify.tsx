@@ -8,6 +8,8 @@ import amplifyStep1 from "@/assets/amplify-step-1.jpg";
 import amplifyStep2 from "@/assets/amplify-step-2.jpg";
 import amplifyStep3 from "@/assets/amplify-step-3.jpg";
 import amplifyStep4 from "@/assets/amplify-step-4.jpg";
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 import {
   Megaphone,
   Radio,
@@ -57,8 +59,18 @@ const stats = [
 const Amplify = () => {
   const { t } = useRegionText();
 
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Amplify"
+        description="Amplify your healthcare staff bank with AI-driven shift broadcasting and faster fill rates across your workforce."
+        path={`/${region}/products/amplify`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Amplify", url: `/${region}/products/amplify` },
+        ])}
+      />
       <Navbar transparent />
 
       <section className="relative flex min-h-[90vh] items-center overflow-hidden bg-foreground">

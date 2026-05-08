@@ -10,11 +10,12 @@ import { useRegionText } from "@/lib/regionalize";
 import { sendApplicationEmails } from "@/lib/emailService";
 import ReCaptcha from "@/components/ReCaptcha";
 import { trackEvent } from "@/lib/analytics";
+import SEO from "@/components/SEO";
 
 const JobApplication = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const { regionPath } = useRegion();
+  const { regionPath, region } = useRegion();
   const { t } = useRegionText();
   const { jobs } = useJobs();
   const job = jobs.find((j) => j.id === id);
@@ -118,6 +119,7 @@ const JobApplication = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Apply for Job" description="Apply for an NHS job through Flexzo." path={`/${region}/jobs/${id}/apply`} noindex />
       <Navbar />
 
       <section className="border-b border-border bg-muted pt-32 pb-10">

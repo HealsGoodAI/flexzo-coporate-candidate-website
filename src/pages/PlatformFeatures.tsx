@@ -5,6 +5,8 @@ import { useRegionText } from "@/lib/regionalize";
 import RegionLink from "@/components/RegionLink";
 import { Users, CalendarCheck, ShieldCheck, DollarSign, Zap, MapPin, BarChart3, Brain, ArrowRight, CheckCircle2 } from "lucide-react";
 
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number = 0) => ({
@@ -38,8 +40,18 @@ const hospitalFeatures = [
 const PlatformFeatures = () => {
   const { t } = useRegionText();
 
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Platform Features"
+        description="Explore the full Flexzo platform — AI sourcing, staff bank management, rostering, compliance and analytics in one place."
+        path={`/${region}/platform-features`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Platform Features", url: `/${region}/platform-features` },
+        ])}
+      />
       <Navbar transparent />
 
       <section className="relative flex min-h-[80vh] items-center overflow-hidden bg-foreground">

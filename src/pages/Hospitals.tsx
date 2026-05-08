@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import { useRegionText } from "@/lib/regionalize";
 import RegionLink from "@/components/RegionLink";
 
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number = 0) => ({
@@ -35,8 +37,18 @@ const whyChoose = [
 const Hospitals = () => {
   const { t } = useRegionText();
 
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Hospitals"
+        description="Workforce solutions for hospitals — fill clinical and non-clinical shifts faster with AI-powered staff bank technology."
+        path={`/${region}/sectors/hospitals`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Hospitals", url: `/${region}/sectors/hospitals` },
+        ])}
+      />
       <Navbar transparent />
 
       {/* ── HERO ── */}

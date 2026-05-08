@@ -1,6 +1,7 @@
 import { useState, useMemo, useCallback } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import SEO, { breadcrumbSchema } from "@/components/SEO";
 import {
   Search,
   MapPin,
@@ -152,8 +153,18 @@ const [category, setCategory] = useState("All");
     maxDistance < 100,
   ].filter(Boolean).length;
 
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Search NHS Jobs"
+        description="Search hundreds of NHS bank, locum and agency-free shifts. Filter by speciality, location and pay rate."
+        path={`/${region}/jobs/search`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Search NHS Jobs", url: `/${region}/jobs/search` },
+        ])}
+      />
       <Navbar />
 
       {/* Search header */}

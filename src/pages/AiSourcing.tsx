@@ -9,6 +9,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useRegionText } from "@/lib/regionalize";
 import RegionLink from "@/components/RegionLink";
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 import {
   BarChart3,
   ShieldCheck,
@@ -114,8 +116,18 @@ const stats = [
 
 const AiSourcing = () => {
   const { t } = useRegionText();
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="AI Sourcing"
+        description="AI-powered candidate sourcing that finds, ranks and books compliance-ready healthcare professionals for NHS Trusts in seconds."
+        path={`/${region}/products/ai-sourcing`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "AI Sourcing", url: `/${region}/products/ai-sourcing` },
+        ])}
+      />
       <Navbar transparent />
 
       {/* ── HERO ── Full-bleed dark immersive block */}

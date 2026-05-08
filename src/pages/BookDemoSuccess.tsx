@@ -5,13 +5,15 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useRegion } from "@/hooks/useRegion";
 import { useRegionText } from "@/lib/regionalize";
+import SEO from "@/components/SEO";
 
 const RegisterSuccess = () => {
-  const { regionPath } = useRegion();
+  const { regionPath, region } = useRegion();
   const { t } = useRegionText();
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Registration Confirmed" description="Your Flexzo registration is confirmed." path={`/${region}/register/success`} noindex />
       <Navbar />
 
       <section className="flex min-h-[70vh] items-center justify-center pt-32 pb-20">

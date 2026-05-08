@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import { useRegionText } from "@/lib/regionalize";
 import RegionLink from "@/components/RegionLink";
 
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number = 0) => ({
@@ -80,8 +82,18 @@ const RegisterButton = () => (
 
 const PrivateHealthcare = () => {
   const { t } = useRegionText();
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Private Healthcare"
+        description="Premium workforce solutions for private hospitals and clinics — premium clinicians, full compliance, transparent pricing."
+        path={`/${region}/sectors/private-healthcare`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Private Healthcare", url: `/${region}/sectors/private-healthcare` },
+        ])}
+      />
       <Navbar transparent />
 
       {/* ── HERO ── */}

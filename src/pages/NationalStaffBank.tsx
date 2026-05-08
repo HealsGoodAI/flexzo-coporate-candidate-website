@@ -8,6 +8,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useRegionText } from "@/lib/regionalize";
 import RegionLink from "@/components/RegionLink";
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 import {
   ShieldCheck,
   Scale,
@@ -119,8 +121,18 @@ const stats = [
 const NationalStaffBank = () => {
   const { t } = useRegionText();
 
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="National Staff Bank"
+        description="Tap into the UK's national staff bank network for hard-to-fill clinical shifts across hospitals, primary care and community."
+        path={`/${region}/products/national-staff-bank`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "National Staff Bank", url: `/${region}/products/national-staff-bank` },
+        ])}
+      />
       <Navbar transparent />
 
       {/* ── HERO ── */}

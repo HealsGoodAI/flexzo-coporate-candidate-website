@@ -11,6 +11,8 @@ import fuelLogo from "@/assets/fuel-ventures-logo.png";
 import fuelTeam from "@/assets/fuel-ventures-team.jpg";
 import RegionLink from "@/components/RegionLink";
 
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 const highlights = [
   { label: "Seed Funding Raised", value: "£4m", description: "Enabling NHS rollout and USA explorations", icon: PoundSterling },
   { label: "Lead Investor", value: "Fuel Ventures", description: "Leading UK early-stage VC firm", logo: fuelLogo },
@@ -20,8 +22,18 @@ const highlights = [
 const Investors = () => {
   const { t } = useRegionText();
 
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Investors"
+        description="Investor information for Flexzo — the AI-powered healthcare staffing platform transforming workforce management across the NHS."
+        path={`/${region}/investors`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Investors", url: `/${region}/investors` },
+        ])}
+      />
       <Navbar transparent />
 
       <section className="relative overflow-hidden bg-gradient-to-br from-foreground via-foreground to-[#0a2540] pt-32 pb-20">

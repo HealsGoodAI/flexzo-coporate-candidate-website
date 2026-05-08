@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import { useRegionText } from "@/lib/regionalize";
 import RegionLink from "@/components/RegionLink";
 
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number = 0) => ({
@@ -38,8 +40,18 @@ const RegisterButton = ({ t }: { t: (s: string) => string }) => (
 const Pharmacy = () => {
   const { t } = useRegionText();
 
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Pharmacy"
+        description="Find pharmacists and pharmacy technicians on demand with Flexzo's AI-powered staffing platform for community and hospital pharmacy."
+        path={`/${region}/sectors/pharmacy`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Pharmacy", url: `/${region}/sectors/pharmacy` },
+        ])}
+      />
       <Navbar transparent />
 
       <section className="relative min-h-screen flex items-center overflow-hidden bg-foreground">

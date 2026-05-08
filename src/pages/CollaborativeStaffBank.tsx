@@ -8,6 +8,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useRegionText } from "@/lib/regionalize";
 import RegionLink from "@/components/RegionLink";
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 import {
   ShieldCheck,
   Scale,
@@ -117,8 +119,18 @@ const stats = [
 const CollaborativeStaffBank = () => {
   const { t } = useRegionText();
 
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Collaborative Staff Bank"
+        description="Share workforce capacity across NHS Trusts with a collaborative staff bank that reduces agency spend and improves fill rates."
+        path={`/${region}/products/collaborative-staff-bank`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Collaborative Staff Bank", url: `/${region}/products/collaborative-staff-bank` },
+        ])}
+      />
       <Navbar transparent />
 
       {/* ── HERO ── */}

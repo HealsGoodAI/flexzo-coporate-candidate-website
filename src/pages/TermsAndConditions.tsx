@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 const sections = [
   {
     title: "1. Introduction and Acceptance",
@@ -111,8 +113,18 @@ const sections = [
 ];
 
 const TermsAndConditions = () => {
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Terms & Conditions"
+        description="Read the terms and conditions that govern your use of the Flexzo platform and services."
+        path={`/${region}/terms-and-conditions`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Terms & Conditions", url: `/${region}/terms-and-conditions` },
+        ])}
+      />
       <Navbar transparent />
 
       {/* Hero */}

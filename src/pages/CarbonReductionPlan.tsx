@@ -1,9 +1,21 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 const CarbonReductionPlan = () => {
+  const { region } = useRegion();
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEO
+        title="Carbon Reduction Plan"
+        description="Flexzo's commitment to reducing carbon emissions across our operations and supply chain."
+        path={`/${region}/carbon-reduction-plan`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Carbon Reduction Plan", url: `/${region}/carbon-reduction-plan` },
+        ])}
+      />
       <Navbar />
 
       <main className="flex-1 px-6 py-20">
