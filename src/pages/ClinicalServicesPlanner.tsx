@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useRegionText } from "@/lib/regionalize";
 import RegionLink from "@/components/RegionLink";
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 import {
   BarChart3,
   ShieldCheck,
@@ -106,8 +108,18 @@ const stats = [
 
 const ClinicalServicesPlanner = () => {
   const { t } = useRegionText();
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Clinical Services Planner"
+        description="Plan elective and clinical services with AI-powered demand forecasting, resourcing and scheduling for healthcare providers."
+        path={`/${region}/products/clinical-services-planner`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Clinical Services Planner", url: `/${region}/products/clinical-services-planner` },
+        ])}
+      />
       <Navbar transparent />
 
       {/* ── HERO ── */}

@@ -13,6 +13,8 @@ import Footer from "@/components/Footer";
 import RegionLink from "@/components/RegionLink";
 import { useRegionText } from "@/lib/regionalize";
 
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number = 0) => ({
@@ -124,8 +126,18 @@ const avatarColors = [
 const Team = () => {
   const { t } = useRegionText();
 
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Our Team"
+        description="Meet the team building Flexzo — healthcare workforce experts and AI engineers reimagining staffing for the NHS."
+        path={`/${region}/team`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Our Team", url: `/${region}/team` },
+        ])}
+      />
       <Navbar transparent />
 
       {/* ── HERO ── */}

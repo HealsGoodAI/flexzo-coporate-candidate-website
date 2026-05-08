@@ -8,6 +8,8 @@ import staffBankStepImg from "@/assets/staff-bank-step.jpg";
 import staffBankStep2Img from "@/assets/staff-bank-step-2.jpg";
 import staffBankStep3Img from "@/assets/staff-bank-step-3.jpg";
 import staffBankStep4Img from "@/assets/staff-bank-step-4.jpg";
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 import {
   Link2,
   ShieldCheck,
@@ -117,8 +119,18 @@ const stats = [
 const InternalStaffBank = () => {
   const { t } = useRegionText();
 
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Internal Staff Bank"
+        description="Build and run a high-performing internal NHS staff bank with AI matching, instant booking and full compliance tracking."
+        path={`/${region}/products/internal-staff-bank`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Internal Staff Bank", url: `/${region}/products/internal-staff-bank` },
+        ])}
+      />
       <Navbar transparent />
 
       {/* ── HERO ── */}

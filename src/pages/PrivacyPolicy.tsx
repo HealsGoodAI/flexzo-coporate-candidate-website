@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 const sections = [
   {
     title: "1. Introduction",
@@ -104,8 +106,18 @@ const sections = [
 ];
 
 const PrivacyPolicy = () => {
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Privacy Policy"
+        description="Read the Flexzo privacy policy and learn how we collect, use and protect your personal data."
+        path={`/${region}/privacy-policy`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Privacy Policy", url: `/${region}/privacy-policy` },
+        ])}
+      />
       <Navbar transparent />
 
       <section className="relative overflow-hidden bg-gradient-to-br from-foreground via-foreground to-[#0a2540] pt-32 pb-16">

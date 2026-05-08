@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import { useRegionText } from "@/lib/regionalize";
 import RegionLink from "@/components/RegionLink";
 
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number = 0) => ({
@@ -62,8 +64,18 @@ const getStartedBenefits = [
 
 const PrimaryCare = () => {
   const { t } = useRegionText();
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Primary Care"
+        description="AI-powered staffing for GP practices, PCNs and primary care networks. Find locum GPs, nurses and clinicians instantly."
+        path={`/${region}/sectors/primary-care`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Primary Care", url: `/${region}/sectors/primary-care` },
+        ])}
+      />
       <Navbar transparent />
 
       {/* ── HERO ── */}

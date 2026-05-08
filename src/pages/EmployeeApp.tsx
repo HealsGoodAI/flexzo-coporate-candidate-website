@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useRegionText } from "@/lib/regionalize";
 import RegionLink from "@/components/RegionLink";
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 import {
   Smartphone,
   Bell,
@@ -109,8 +111,18 @@ const stats = [
 const EmployeeApp = () => {
   const { t } = useRegionText();
 
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Employee App"
+        description="A mobile-first employee app for NHS bank workers — find shifts, manage availability and get paid faster."
+        path={`/${region}/products/employee-app`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Employee App", url: `/${region}/products/employee-app` },
+        ])}
+      />
       <Navbar transparent />
 
       {/* ── HERO ── */}

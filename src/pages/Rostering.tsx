@@ -8,6 +8,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useRegionText } from "@/lib/regionalize";
 import RegionLink from "@/components/RegionLink";
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 import {
   CalendarDays, ShieldCheck, Users, BarChart3, Clock, Smartphone, Brain, Target, ArrowRight, Activity, UserCheck, Layers,
 } from "lucide-react";
@@ -53,8 +55,18 @@ const howItWorks = [
 const Rostering = () => {
   const { t } = useRegionText();
 
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Rostering"
+        description="AI-driven rostering for healthcare teams that balances skills, availability and compliance to keep services running safely."
+        path={`/${region}/products/rostering`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Rostering", url: `/${region}/products/rostering` },
+        ])}
+      />
       <Navbar transparent />
 
       <section className="relative flex min-h-[90vh] items-center overflow-hidden bg-foreground">

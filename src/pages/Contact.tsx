@@ -12,6 +12,7 @@ import { sendContactEmail } from "@/lib/emailService";
 import ReCaptcha from "@/components/ReCaptcha";
 import { trackEvent } from "@/lib/analytics";
 
+import SEO, { breadcrumbSchema } from "@/components/SEO";
 const offices_uk = [
   { name: "UK Head Office", address: "Noble House, Capital Dr, Milton Keynes, MK14 6QP" },
   { name: "Dubai Office", address: "908B, Business Central Towers, Dubai Internet City, Dubai" },
@@ -67,6 +68,15 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Contact Us"
+        description="Get in touch with the Flexzo team. Talk to us about workforce technology, partnerships, jobs or general enquiries."
+        path={`/${region}/contact`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Contact Us", url: `/${region}/contact` },
+        ])}
+      />
       <Navbar transparent />
 
       <section className="relative overflow-hidden bg-foreground pt-32 pb-20">

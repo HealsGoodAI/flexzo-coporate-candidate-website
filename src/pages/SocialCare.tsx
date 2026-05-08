@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import { useRegionText } from "@/lib/regionalize";
 import RegionLink from "@/components/RegionLink";
 
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number = 0) => ({
@@ -41,8 +43,18 @@ const RegisterButton = ({ t }: { t: (s: string) => string }) => (
 const SocialCare = () => {
   const { t } = useRegionText();
 
+  const { region } = useRegion();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Social Care"
+        description="Care staff and support workers on demand. Flexzo helps social care providers fill shifts quickly with vetted, compliant workers."
+        path={`/${region}/sectors/social-care`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Social Care", url: `/${region}/sectors/social-care` },
+        ])}
+      />
       <Navbar transparent />
 
       {/* Hero */}
