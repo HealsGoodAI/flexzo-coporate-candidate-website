@@ -4,7 +4,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import RegionLayout from "@/components/RegionLayout";
-import GeoRedirect from "@/pages/GeoRedirect";
 import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import AiSourcing from "./pages/AiSourcing";
@@ -55,8 +54,11 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-          {/* Root: geo-detect and redirect to /uk or /us */}
-          <Route path="/" element={<GeoRedirect />} />
+          {/* Root: render UK home directly so "/" is indexable.
+              Canonical points to /uk via the SEO component to consolidate signals. */}
+          <Route path="/" element={<RegionLayout />}>
+            <Route index element={<Index />} />
+          </Route>
 
           {/* Region-scoped routes */}
           <Route path="/:region" element={<RegionLayout />}>

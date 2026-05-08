@@ -4,15 +4,17 @@ import { RegionProvider } from "@/hooks/useRegion";
 import RegionErrorBoundary from "@/components/RegionErrorBoundary";
 
 const RegionLayout = () => {
-  const { region } = useParams<{ region: string }>();
+  const { region: regionParam } = useParams<{ region: string }>();
+  // Default to UK when no region segment is present (e.g. root "/")
+  const region = regionParam ?? "uk";
   const navigate = useNavigate();
 
   // Redirect invalid regions to /uk
   useEffect(() => {
-    if (region && region !== "uk" && region !== "us") {
+    if (regionParam && regionParam !== "uk" && regionParam !== "us") {
       navigate("/uk", { replace: true });
     }
-  }, [region, navigate]);
+  }, [regionParam, navigate]);
 
   // Intercept clicks on internal <a> tags to auto-prefix with region
   useEffect(() => {
