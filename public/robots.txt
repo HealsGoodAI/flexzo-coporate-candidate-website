@@ -1,13 +1,46 @@
+# Flexzo robots.txt
+# Default: allow all reputable crawlers, block utility/success/auth pages.
+
+User-agent: *
+Allow: /
+
+# Utility, success and transactional pages (noindex on-page; disallow as a hint)
+Disallow: /*/contact-success
+Disallow: /*/book-demo-success
+Disallow: /*/jobs/*/apply
+Disallow: /*/job-application-success
+Disallow: /*/email-template-test
+Disallow: /contact-success
+Disallow: /book-demo-success
+Disallow: /job-application-success
+Disallow: /email-template-test
+
+# Query-string variants of search/jobs (avoid duplicate indexing)
+Disallow: /*?*
+
+# Explicitly allow key crawlers (search + social + reputable AI)
 User-agent: Googlebot
 Allow: /
 
+User-agent: Googlebot-Image
+Allow: /
+
 User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
 Allow: /
 
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Slackbot
 Allow: /
 
 User-agent: GPTBot
@@ -19,13 +52,27 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: *
-Allow: /
+# Block known bad/aggressive scrapers
+User-agent: AhrefsBot
+Disallow: /
 
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+Host: flexzo.ai
 Sitemap: https://flexzo.ai/sitemap.xml
