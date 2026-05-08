@@ -265,7 +265,7 @@ const AiSourcing = () => {
               src={aiSourcingOverviewImg}
               alt="AI matching candidates with availability scores"
               className="w-full rounded-2xl"
-            />
+             loading="lazy" decoding="async"/>
           </motion.div>
         </div>
       </section>
@@ -375,7 +375,7 @@ const AiSourcing = () => {
                 </div>
                 <div className={`aspect-[4/3] overflow-hidden rounded-2xl bg-muted ${i % 2 === 1 ? "lg:order-1" : ""}`}>
                   {item.image ? (
-                    <img src={item.image} alt={item.title} className="h-full w-full object-cover" />
+                    <img src={item.image} alt={item.title} className="h-full w-full object-cover"  loading="lazy" decoding="async"/>
                   ) : (
                     <div className="flex h-full items-center justify-center">
                       <div className="h-24 w-24 rounded-2xl bg-[#0075FF]/10 flex items-center justify-center">

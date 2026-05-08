@@ -49,7 +49,7 @@ const About = () => {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-10 md:grid-cols-2">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="overflow-hidden rounded-2xl border border-border bg-card">
-            <img src={aboutVision} alt="Team collaboration" className="h-48 w-full object-cover" />
+            <img src={aboutVision} alt="Team collaboration" className="h-48 w-full object-cover"  loading="lazy" decoding="async"/>
             <div className="p-10">
               <Eye className="mb-4 text-[#0075FF]" size={36} />
               <h2 className="mb-4 text-2xl font-bold text-foreground">{t("Our Vision")}</h2>
@@ -59,7 +59,7 @@ const About = () => {
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="overflow-hidden rounded-2xl border border-border bg-card">
-            <img src={aboutMission} alt="Healthcare professional" className="h-48 w-full object-cover" />
+            <img src={aboutMission} alt="Healthcare professional" className="h-48 w-full object-cover"  loading="lazy" decoding="async"/>
             <div className="p-10">
               <Target className="mb-4 text-[#0CE3FF]" size={36} />
               <h2 className="mb-4 text-2xl font-bold text-foreground">{t("Our Mission")}</h2>
@@ -75,14 +75,14 @@ const About = () => {
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <img src={healsgoodLogo} alt="HealsGood logo" className="mb-6 h-10 w-auto" />
+              <img src={healsgoodLogo} alt="HealsGood logo" className="mb-6 h-10 w-auto"  loading="lazy" decoding="async"/>
               <h2 className="mb-6 text-3xl font-bold text-foreground">{t("Owned by HealsGood")}</h2>
               <p className="leading-relaxed text-muted-foreground">
                 {t("Flexzo AI is proudly owned by HealsGood, a global leader in healthcare innovation. As part of the Healsgood family, Flexzo benefits from a strong foundation of expertise in healthcare technology, recruitment, and compliance. Together with sister platforms like Careo, we're driving forward a new era of smarter, more efficient healthcare staffing solutions that prioritise both patient care and workforce empowerment.")}
               </p>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="overflow-hidden rounded-2xl border border-border bg-card">
-              <img src={jackHenderson} alt="Jack Henderson, Founder" className="h-[28rem] w-full object-cover object-top" />
+              <img src={jackHenderson} alt="Jack Henderson, Founder" className="h-[28rem] w-full object-cover object-top"  loading="lazy" decoding="async"/>
               <div className="p-10">
                 <h3 className="mb-4 text-xl font-bold text-foreground">{t("Our Story")}</h3>
                 <p className="mb-4 leading-relaxed text-muted-foreground">

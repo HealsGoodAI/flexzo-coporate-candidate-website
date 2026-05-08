@@ -264,7 +264,7 @@ const Team = () => {
                         src={member.image}
                         alt={member.name}
                         className="h-full w-full object-cover"
-                      />
+                       loading="lazy" decoding="async"/>
                     ) : (
                       <div className={`flex h-full w-full items-center justify-center ${avatarColors[i % avatarColors.length]}`}>
                         <span className="text-xl font-bold text-white/80">

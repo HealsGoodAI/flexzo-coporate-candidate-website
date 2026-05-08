@@ -252,7 +252,7 @@ const NationalStaffBank = () => {
             src={collaborativeBankMockup}
             alt="National Staff Bank dashboard mockup"
             className="w-full block"
-          />
+           loading="lazy" decoding="async"/>
         </motion.div>
       </section>
 
@@ -368,7 +368,7 @@ const NationalStaffBank = () => {
                     src={item.img}
                     alt={item.title}
                     className="h-full w-full object-cover"
-                  />
+                   loading="lazy" decoding="async"/>
                 </div>
               </motion.div>
             ))}

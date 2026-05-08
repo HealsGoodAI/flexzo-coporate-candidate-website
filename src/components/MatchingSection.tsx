@@ -94,7 +94,7 @@ const MatchingSection = () => {
                     src={c.img}
                     alt="Healthcare candidate"
                     className="h-auto w-full"
-                  />
+                   loading="lazy" decoding="async"/>
                 </motion.div>
               </motion.div>
             ))}
