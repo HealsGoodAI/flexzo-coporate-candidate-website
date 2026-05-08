@@ -4,6 +4,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useRegionText } from "@/lib/regionalize";
 import RegionLink from "@/components/RegionLink";
+import SEO, { breadcrumbSchema } from "@/components/SEO";
+import { useRegion } from "@/hooks/useRegion";
+import { useLocation } from "react-router-dom";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -50,9 +53,24 @@ const CareerPageTemplate = ({
   ctaDescription = "Ready to take the next step? Register with Flexzo today and discover NHS career opportunities that match your skills and ambitions.",
 }: CareerPageProps) => {
   const { t } = useRegionText();
+  const { region } = useRegion();
+  const location = useLocation();
+  const seoTitle = `${tagline}`;
+  const seoDescription = subtitle.length > 160 ? subtitle.slice(0, 157) + "…" : subtitle;
+  const careerPath = location.pathname.replace(/^\/(uk|us)/, "");
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={seoTitle}
+        description={seoDescription}
+        path={`/${region}${careerPath}`}
+        jsonLd={breadcrumbSchema([
+          { name: "Home", url: `/${region}` },
+          { name: "Careers", url: `/${region}/why-join-flexzo` },
+          { name: tagline, url: `/${region}${careerPath}` },
+        ])}
+      />
       <Navbar transparent />
 
       {/* HERO */}
