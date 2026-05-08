@@ -119,6 +119,7 @@ const JobApplication = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Apply for Job" description="Apply for an NHS job through Flexzo." path={`/${region}/jobs/${id}/apply`} noindex />
       <Navbar />
 
       <section className="border-b border-border bg-muted pt-32 pb-10">

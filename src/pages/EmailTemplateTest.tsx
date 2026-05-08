@@ -36,6 +36,7 @@ const EmailTemplateTest = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Email Template Verifier" description="Internal tool." path="/email-template-test" noindex />
       <Navbar />
 
       <section className="border-b border-border bg-muted pt-32 pb-10">
