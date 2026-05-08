@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { useJobs } from "@/hooks/useJobs";
 import { useRegion } from "@/hooks/useRegion";
 import { useRegionText } from "@/lib/regionalize";
+import SEO, { jobPostingSchema, breadcrumbSchema } from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -18,7 +19,7 @@ const fadeUp = {
 
 const JobDetail = () => {
   const { id } = useParams<{ id: string }>();
-  const { regionPath } = useRegion();
+  const { regionPath, region } = useRegion();
   const { t } = useRegionText();
   const { jobs, loading } = useJobs();
   const job = jobs.find((j) => j.id === id);
@@ -26,6 +27,7 @@ const JobDetail = () => {
   if (!job) {
     return (
       <div className="min-h-screen bg-background">
+        <SEO title="Job Not Found" path={`/${region}/jobs`} noindex />
         <Navbar />
         <div className="flex min-h-[60vh] items-center justify-center pt-24">
           <div className="text-center">
@@ -43,6 +45,31 @@ const JobDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={job.title}
+        description={(job.description || `${job.title} at ${job.organisation || "NHS"} – ${job.location || ""}`).slice(0, 160)}
+        path={`/${region}/jobs/${job.id}`}
+        type="article"
+        jsonLd={[
+          jobPostingSchema({
+            title: job.title,
+            description: job.description || job.title,
+            datePosted: job.posted && job.posted !== "Open" ? job.posted : undefined,
+            validThrough: job.closing && job.closing !== "Open" ? job.closing : undefined,
+            employmentType: job.contractType || job.workingPattern,
+            hiringOrganization: job.organisation,
+            location: job.location,
+            region: region as "uk" | "us",
+            salary: job.salary,
+            url: `/${region}/jobs/${job.id}`,
+          }),
+          breadcrumbSchema([
+            { name: "Home", url: `/${region}` },
+            { name: "Jobs", url: `/${region}/jobs` },
+            { name: job.title, url: `/${region}/jobs/${job.id}` },
+          ]),
+        ]}
+      />
       <Navbar />
 
       {/* Header */}
