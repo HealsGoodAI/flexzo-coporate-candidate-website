@@ -5,16 +5,18 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useRegion } from "@/hooks/useRegion";
 import { useRegionText } from "@/lib/regionalize";
+import SEO from "@/components/SEO";
 
 const JobApplicationSuccess = () => {
   const { id } = useParams<{ id: string }>();
-  const { regionPath } = useRegion();
+  const { regionPath, region } = useRegion();
   const { t } = useRegionText();
   const location = useLocation();
   const jobTitle = (location.state as any)?.jobTitle || "this role";
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Application Submitted" description="Your application has been submitted." path={`/${region}/jobs/${id}/apply/success`} noindex />
       <Navbar />
 
       <section className="flex min-h-[70vh] items-center justify-center pt-24 pb-16">

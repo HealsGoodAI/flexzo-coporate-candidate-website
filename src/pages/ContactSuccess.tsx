@@ -5,13 +5,15 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useRegion } from "@/hooks/useRegion";
 import { useRegionText } from "@/lib/regionalize";
+import SEO from "@/components/SEO";
 
 const ContactSuccess = () => {
-  const { regionPath } = useRegion();
+  const { regionPath, region } = useRegion();
   const { t } = useRegionText();
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Message Sent" description="Your message has been received." path={`/${region}/contact/success`} noindex />
       <Navbar />
 
       <section className="flex min-h-[70vh] items-center justify-center pt-32 pb-20">

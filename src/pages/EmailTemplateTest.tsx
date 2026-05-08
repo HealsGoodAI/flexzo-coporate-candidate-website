@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { testEmailTemplates, type TestEmailResult } from "@/lib/emailService";
 import { useRegion } from "@/hooks/useRegion";
+import SEO from "@/components/SEO";
 
 const EmailTemplateTest = () => {
   const { regionPath } = useRegion();
