@@ -28,6 +28,11 @@ const SEO = ({
   const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | AI-Powered Healthcare Staffing Platform`;
   const canonicalUrl = `${BASE_URL}${path}`;
 
+  // Compute hreflang alternates by swapping /uk and /us prefixes
+  const regionMatch = path.match(/^\/(uk|us)(\/.*|$)/);
+  const ukAlt = regionMatch ? `${BASE_URL}/uk${regionMatch[2]}` : null;
+  const usAlt = regionMatch ? `${BASE_URL}/us${regionMatch[2]}` : null;
+
   const jsonLdArray = jsonLd
     ? Array.isArray(jsonLd)
       ? jsonLd
@@ -41,12 +46,21 @@ const SEO = ({
       <link rel="canonical" href={canonicalUrl} />
       {noindex && <meta name="robots" content="noindex, nofollow" />}
 
+      {/* Hreflang alternates for region-scoped pages */}
+      {ukAlt && <link rel="alternate" hrefLang="en-GB" href={ukAlt} />}
+      {usAlt && <link rel="alternate" hrefLang="en-US" href={usAlt} />}
+      {ukAlt && <link rel="alternate" hrefLang="x-default" href={ukAlt} />}
+
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={image} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={title || SITE_NAME} />
+      <meta property="og:locale" content={regionMatch?.[1] === "us" ? "en_US" : "en_GB"} />
       <meta property="og:site_name" content={SITE_NAME} />
 
       {/* Twitter */}
@@ -108,6 +122,44 @@ export const breadcrumbSchema = (items: { name: string; url: string }[]) => ({
     name: item.name,
     item: `https://flexzo.ai${item.url}`,
   })),
+});
+
+// JobPosting schema for individual job pages (Google Jobs eligibility)
+export const jobPostingSchema = (job: {
+  title: string;
+  description: string;
+  datePosted?: string;
+  validThrough?: string;
+  employmentType?: string;
+  hiringOrganization?: string;
+  location?: string;
+  region?: "uk" | "us";
+  salary?: string;
+  url: string;
+}) => ({
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+  title: job.title,
+  description: job.description,
+  datePosted: job.datePosted,
+  validThrough: job.validThrough,
+  employmentType: job.employmentType || "CONTRACTOR",
+  hiringOrganization: {
+    "@type": "Organization",
+    name: job.hiringOrganization || "Flexzo",
+    sameAs: "https://flexzo.ai",
+    logo: "https://flexzo.ai/Flexzo-Logo.svg",
+  },
+  jobLocation: {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: job.location || (job.region === "us" ? "United States" : "United Kingdom"),
+      addressCountry: job.region === "us" ? "US" : "GB",
+    },
+  },
+  directApply: true,
+  url: `https://flexzo.ai${job.url}`,
 });
 
 export default SEO;
