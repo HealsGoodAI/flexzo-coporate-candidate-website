@@ -86,7 +86,7 @@ const BenefitsSection = () => {
           src={employeeAppMockup}
           alt="Flexzo employee mobile app"
           className="w-full object-cover"
-        />
+         loading="lazy" decoding="async"/>
       </motion.div>
     </section>
   );

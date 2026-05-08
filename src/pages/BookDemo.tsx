@@ -274,7 +274,7 @@ const Register = () => {
 
             <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} className="hidden lg:block">
               <div className="sticky top-32 overflow-hidden rounded-2xl border border-border bg-muted/50">
-                <img src={bookDemoHero} alt="Healthcare professional" className="h-56 w-full object-cover" />
+                <img src={bookDemoHero} alt="Healthcare professional" className="h-56 w-full object-cover"  loading="lazy" decoding="async"/>
                 <div className="p-10">
                   <Globe className="mb-6 text-[#0075FF]" size={48} />
                   <h2 className="mb-4 text-2xl font-bold text-foreground">{t("Access a world of healthcare opportunities")}</h2>

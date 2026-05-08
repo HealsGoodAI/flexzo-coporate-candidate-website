@@ -232,7 +232,7 @@ const EmployeeApp = () => {
             src={employeeAppMockup}
             alt="Employee App dashboard mockup"
             className="w-full block"
-          />
+           loading="lazy" decoding="async"/>
         </motion.div>
       </section>
 
@@ -345,7 +345,7 @@ const EmployeeApp = () => {
                 </div>
                 <div className={`aspect-[4/3] overflow-hidden rounded-2xl ${item.img ? "" : "bg-muted"} ${i % 2 === 1 ? "lg:order-1" : ""}`}>
                   {item.img ? (
-                    <img src={item.img} alt={item.title} className="h-full w-full object-cover" />
+                    <img src={item.img} alt={item.title} className="h-full w-full object-cover"  loading="lazy" decoding="async"/>
                   ) : (
                     <div className="flex h-full items-center justify-center">
                       <div className="h-24 w-24 rounded-2xl bg-[#0075FF]/10 flex items-center justify-center">

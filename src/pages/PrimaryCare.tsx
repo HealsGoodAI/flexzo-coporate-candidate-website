@@ -178,7 +178,7 @@ const PrimaryCare = () => {
               variants={fadeUp}
               className="aspect-[4/3] overflow-hidden rounded-2xl"
             >
-              <img src={primaryCarePractice} alt="GP practice" className="h-full w-full object-cover" />
+              <img src={primaryCarePractice} alt="GP practice" className="h-full w-full object-cover"  loading="lazy" decoding="async"/>
             </motion.div>
           </div>
         </div>

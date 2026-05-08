@@ -81,7 +81,7 @@ const WhyJoinFlexzo = () => {
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Healthcare professional" className="h-full w-full object-cover" />
+          <img src={heroImage} alt="Healthcare professional" className="h-full w-full object-cover"  loading="lazy" decoding="async"/>
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/30" />
         </div>
         <div className="relative mx-auto max-w-7xl px-6 py-32">
@@ -133,7 +133,7 @@ const WhyJoinFlexzo = () => {
                 src={employeeAppMockup}
                 alt="Flexzo Employee App"
                 className="w-full max-w-md mx-auto"
-              />
+               loading="lazy" decoding="async"/>
             </ScrollReveal>
           </div>
         </div>

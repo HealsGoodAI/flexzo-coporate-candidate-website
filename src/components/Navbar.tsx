@@ -115,7 +115,7 @@ const Navbar = ({ transparent = false }: NavbarProps) => {
               src={isTransparent ? flexzoLogoWhite : flexzoLogo}
               alt="Flexzo"
               className="h-7"
-            />
+             loading="eager" fetchpriority="high" decoding="async"/>
           </a>
 
           {/* Desktop */}
@@ -248,7 +248,7 @@ const Navbar = ({ transparent = false }: NavbarProps) => {
           >
             <div className="flex items-center justify-between px-6 pt-5">
               <a href={regionPath("/")} onClick={() => setMobileOpen(false)}>
-                <img src={flexzoLogoWhite} alt="Flexzo" className="h-7" />
+                <img src={flexzoLogoWhite} alt="Flexzo" className="h-7"  loading="eager" fetchpriority="high" decoding="async"/>
               </a>
               <button
                 onClick={() => setMobileOpen(false)}

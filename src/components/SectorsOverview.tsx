@@ -125,7 +125,7 @@ const SectorsOverview = () => {
                     src={sector.image}
                     alt={t(sector.title)}
                     className="h-[85%] w-auto object-contain drop-shadow-2xl transition-transform duration-700 group-hover:scale-105"
-                  />
+                   loading="lazy" decoding="async"/>
                 </div>
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-6 pt-16">
                   <h3 className="mb-2 font-display text-2xl font-bold text-white md:text-3xl">

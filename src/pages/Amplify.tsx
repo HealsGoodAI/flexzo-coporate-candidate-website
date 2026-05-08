@@ -118,7 +118,7 @@ const Amplify = () => {
             </motion.div>
           </div>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} custom={2} variants={fadeUp} className="mt-16">
-            <img src={amplifyPartners} alt="Amplify partner platforms including Google Ads, Meta, LinkedIn Ads, TikTok Ads, Monster, ZipRecruiter, Reed, Adzuna, Joblift, Heyjobs and JobGet" className="w-full" />
+            <img src={amplifyPartners} alt="Amplify partner platforms including Google Ads, Meta, LinkedIn Ads, TikTok Ads, Monster, ZipRecruiter, Reed, Adzuna, Joblift, Heyjobs and JobGet" className="w-full"  loading="lazy" decoding="async"/>
           </motion.div>
         </div>
       </section>
@@ -161,7 +161,7 @@ const Amplify = () => {
                   <p className="max-w-lg text-lg leading-relaxed text-muted-foreground">{t(item.text)}</p>
                 </div>
                 <div className={`aspect-[4/3] overflow-hidden rounded-2xl ${i % 2 === 1 ? "lg:order-1" : ""}`}>
-                  <img src={item.img} alt={item.title} className="h-full w-full object-cover" />
+                  <img src={item.img} alt={item.title} className="h-full w-full object-cover"  loading="lazy" decoding="async"/>
                 </div>
               </motion.div>
             ))}

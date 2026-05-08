@@ -57,7 +57,7 @@ const Investors = () => {
             <motion.div key={item.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="flex flex-col items-center rounded-2xl border border-border bg-white p-8 text-center">
               <div className="flex h-20 items-center justify-center">
                 {item.icon && <item.icon className="text-[#0075FF]" size={40} />}
-                {item.logo && <img src={item.logo} alt={item.value} className="h-12 object-contain" />}
+                {item.logo && <img src={item.logo} alt={item.value} className="h-12 object-contain"  loading="lazy" decoding="async"/>}
               </div>
               <p className="mb-2 mt-4 text-4xl font-bold text-[#0075FF]">{item.value}</p>
               <p className="mb-1 text-sm font-semibold text-foreground">{t(item.label)}</p>
@@ -71,7 +71,7 @@ const Investors = () => {
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <img src={fuelLogo} alt="Fuel Ventures" className="mb-5 h-16 object-contain" />
+              <img src={fuelLogo} alt="Fuel Ventures" className="mb-5 h-16 object-contain"  loading="lazy" decoding="async"/>
               <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[#0075FF]">{t("Fueling the growth of ambitious tech companies")}</p>
               <h2 className="mb-6 text-3xl font-bold text-foreground">{t("Proudly Backed by Fuel Ventures")}</h2>
               <p className="mb-6 leading-relaxed text-muted-foreground">{t("Flexzo AI is proud to be backed by Fuel Ventures, a leading UK early-stage venture capital firm known for supporting high-growth technology companies. In March 2025, Fuel Ventures led a £1.5 million funding round for our parent company, Healsgood, to accelerate the adoption of Flexzo AI across NHS Trusts nationwide.")}</p>
@@ -81,7 +81,7 @@ const Investors = () => {
               </a>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="overflow-hidden rounded-2xl border border-border bg-card">
-              <img src={fuelTeam} alt="Fuel Ventures team" className="h-56 w-full object-cover object-top" />
+              <img src={fuelTeam} alt="Fuel Ventures team" className="h-56 w-full object-cover object-top"  loading="lazy" decoding="async"/>
               <div className="p-10">
               <h3 className="mb-3 text-xl font-bold text-foreground">{t("About Fuel Ventures")}</h3>
               <p className="leading-relaxed text-muted-foreground">{t("Fuel Ventures specialises in investing in early-stage technology businesses with high growth potential. Their portfolio includes some of the UK's most successful startups, and they provide not only capital but also strategic support to help companies scale. Fuel Ventures' investment in Healsgood underscores their confidence in our vision to transform NHS staffing through innovative AI solutions.")}</p>
@@ -95,7 +95,7 @@ const Investors = () => {
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-2 overflow-hidden rounded-2xl border border-border bg-card lg:order-1">
-              <img src={octopusTeam} alt="Octopus Ventures team" className="h-56 w-full object-cover" />
+              <img src={octopusTeam} alt="Octopus Ventures team" className="h-56 w-full object-cover"  loading="lazy" decoding="async"/>
               <div className="p-10">
                 
                 <h3 className="mb-3 text-xl font-bold text-foreground">{t("About Octopus Ventures")}</h3>
@@ -103,7 +103,7 @@ const Investors = () => {
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-1 lg:order-2">
-              <img src={octopusLogo} alt="Octopus Ventures" className="mb-5 h-16 object-contain" />
+              <img src={octopusLogo} alt="Octopus Ventures" className="mb-5 h-16 object-contain"  loading="lazy" decoding="async"/>
               <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[#0075FF]">{t("Venture capital for the founders building a better tomorrow")}</p>
               <h2 className="mb-6 text-3xl font-bold text-foreground">{t("Funded by Octopus Ventures")}</h2>
               <p className="mb-6 leading-relaxed text-muted-foreground">{t("Flexzo AI has secured an investment from Octopus Ventures, one of the largest and most active venture capital investors in Europe. This significant investment will accelerate the growth and adoption of Flexzo AI across NHS Trusts nationwide.")}</p>
@@ -123,8 +123,8 @@ const Investors = () => {
             <h2 className="mb-6 text-3xl font-bold text-foreground md:text-4xl">{t("Supported by AWS & Google Cloud")}</h2>
             <p className="mx-auto mb-10 max-w-3xl leading-relaxed text-muted-foreground">{t("Flexzo AI leverages the robust infrastructure of Google Cloud and Amazon Web Services (AWS) to ensure our platform is secure, scalable, and reliable. These partnerships enable us to process complex data efficiently, provide real-time analytics, and deliver seamless experiences to our users.")}</p>
             <div className="flex items-center justify-center gap-12">
-              <div className="flex h-20 items-center justify-center rounded-xl border border-border bg-card px-6"><img src={awsLogo} alt="AWS" className="h-10 object-contain" /></div>
-              <div className="flex h-20 items-center justify-center rounded-xl border border-border bg-card px-6"><img src={googleCloudLogo} alt="Google Cloud" className="h-10 object-contain" /></div>
+              <div className="flex h-20 items-center justify-center rounded-xl border border-border bg-card px-6"><img src={awsLogo} alt="AWS" className="h-10 object-contain"  loading="lazy" decoding="async"/></div>
+              <div className="flex h-20 items-center justify-center rounded-xl border border-border bg-card px-6"><img src={googleCloudLogo} alt="Google Cloud" className="h-10 object-contain"  loading="lazy" decoding="async"/></div>
             </div>
           </motion.div>
         </div>
