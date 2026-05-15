@@ -73,7 +73,7 @@ const WhyJoinFlexzo = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Why Join Flexzo? | Better Pay, Easy Compliance & Flexible Shifts"
+        title="Why Join Flexzo – Better Pay & Flexible Shifts"
         description="Join Flexzo – the UK's premium collaborative staff bank. Earn more with no agency fees, easy compliance management, and AI-powered job matching for healthcare professionals."
       />
       <Navbar transparent />

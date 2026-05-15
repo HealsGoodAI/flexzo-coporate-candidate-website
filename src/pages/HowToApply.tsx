@@ -37,7 +37,7 @@ const HowToApply = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="How to Apply | Join the UK's Largest Collaborative Staff Bank"
+        title="How to Apply – Join the UK's Largest Staff Bank"
         description="Apply to Flexzo in three simple steps. Sign up, share your availability, and get matched to your dream healthcare job with our AI-powered platform."
       />
       <Navbar transparent />

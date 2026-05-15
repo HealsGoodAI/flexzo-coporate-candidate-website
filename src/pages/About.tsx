@@ -20,7 +20,7 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="About Flexzo"
-        description="Learn about Flexzo AI – redefining healthcare recruitment through intelligent, AI-powered solutions connecting NHS Trusts with compliance-ready healthcare professionals."
+        description="Flexzo AI is redefining healthcare recruitment, connecting NHS Trusts with compliance-ready professionals through intelligent automation."
         path={`/${region}/about`}
         jsonLd={breadcrumbSchema([
           { name: "Home", url: `/${region}` },
