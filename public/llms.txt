@@ -1,0 +1,56 @@
+# Flexzo
+
+> Flexzo is an AI-powered healthcare staffing platform connecting NHS Trusts, hospitals, primary care, pharmacy and social care providers with compliance-ready healthcare professionals.
+
+Flexzo runs the UK's premium collaborative staff bank. The platform automates AI sourcing, internal and collaborative staff banks, clinical services planning, rostering, and an employee app for healthcare professionals. Content is region-scoped under `/uk` (United Kingdom) and `/us` (United States).
+
+## Products
+
+- [AI Sourcing](/uk/products/ai-sourcing): Automated candidate sourcing for NHS Trusts and hospitals.
+- [Internal Staff Bank](/uk/products/internal-staff-bank): Manage your in-house bank workforce.
+- [Collaborative Staff Bank](/uk/products/collaborative-staff-bank): Share staff across partner Trusts.
+- [National Staff Bank](/uk/products/national-staff-bank): Nationwide pool of compliance-ready professionals.
+- [Clinical Services Planner](/uk/products/clinical-services-planner): Plan clinics and theatre lists.
+- [Amplify](/uk/products/amplify): Recruitment marketing and candidate engagement.
+- [Employee App](/uk/products/employee-app): Mobile app for shift availability and bookings.
+- [Rostering](/uk/products/rostering): Intelligent rostering and scheduling.
+- [Platform Features](/uk/platform-features): Overview of platform capabilities.
+
+## Sectors
+
+- [Hospitals](/uk/sectors/hospitals): NHS Trusts and acute hospitals.
+- [Primary Care](/uk/sectors/primary-care): GP practices and primary care networks.
+- [Private Healthcare](/uk/sectors/private-healthcare): Private hospitals and clinics.
+- [Pharmacy](/uk/sectors/pharmacy): Community and hospital pharmacy.
+- [Social Care](/uk/sectors/social-care): Care homes and domiciliary care.
+
+## For Healthcare Professionals
+
+- [Why Join Flexzo](/uk/why-join-flexzo): Benefits of joining the staff bank.
+- [How to Apply](/uk/how-to-apply): Three-step application process.
+- [Jobs](/uk/jobs): Browse current healthcare vacancies.
+- [Register](/uk/register): Sign up and upload your CV.
+
+## Career Paths
+
+- [Doctors](/uk/careers/doctors)
+- [Nursing](/uk/careers/nursing)
+- [Midwifery](/uk/careers/midwifery)
+- [Allied Health Professionals](/uk/careers/allied-health-professionals)
+- [Pharmacy](/uk/careers/pharmacy)
+- [Psychology](/uk/careers/psychology)
+- [Estates and Facilities](/uk/careers/estates-and-facilities)
+
+## Company
+
+- [About](/uk/about): About Flexzo AI.
+- [Team](/uk/team): Meet the team.
+- [Investors](/uk/investors): Investor information.
+- [News](/uk/news): Knowledge hub and articles.
+- [Contact](/uk/contact): Get in touch.
+
+## Optional
+
+- [Privacy Policy](/uk/privacy-policy)
+- [Terms and Conditions](/uk/terms-and-conditions)
+- [Carbon Reduction Plan](/uk/carbon-reduction-plan)
