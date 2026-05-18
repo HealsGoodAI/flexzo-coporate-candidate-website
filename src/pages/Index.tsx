@@ -22,8 +22,8 @@ const Index = () => {
       />
       <Navbar transparent />
       <HeroSection />
-      <PressBanner />
       <FeaturedJobsSection />
+      <PressBanner />
       <BenefitsSection />
       <SectorsOverview />
       <FeaturesSection />
